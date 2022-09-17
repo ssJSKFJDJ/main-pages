@@ -56,14 +56,14 @@
     "description": []
   },
   {
-    "title": "Print",
+    "title": "Print.lua",
     "file_name": "Print",
     "url": "https://cypress0522.github.io/ssJSKFJDJ/Module/Print/",
     "tags": [],
     "description": []
   },
   {
-    "title": "Genshin_Impact_tts",
+    "title": "Genshin_Impact_tts.lua",
     "file_name": "Genshin_Impact_tts",
     "url": "https://cypress0522.github.io/ssJSKFJDJ/Scripts/Genshin_Impact_tts/",
     "tags": [],
@@ -87,6 +87,13 @@
     "title": "隐藏页面",
     "file_name": "log",
     "url": "https://cypress0522.github.io/ssJSKFJDJ/updates/log/",
+    "tags": [],
+    "description": []
+  },
+  {
+    "title": "Lua",
+    "file_name": "lua",
+    "url": "https://cypress0522.github.io/ssJSKFJDJ/categories/lua/",
     "tags": [],
     "description": []
   },

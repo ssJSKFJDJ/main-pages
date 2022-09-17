@@ -1,14 +1,16 @@
 ---
 template: overrides/main.html
+categories:
+     - Lua
 ---
 
-# print.
+# print.lua
 
 > Everyone is permitted to copy and distribute verbatim copies
 
 ```lua
 -------------------------------------------------------------------------------
--- Print 改写. @简律纯 @gexi
+-- print 改写. @简律纯 @gexi
 -------------------------------------------------------------------------------
 writeToFile = function ( str )
     local filename = "print.log"

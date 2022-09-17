@@ -27,7 +27,7 @@ theme:
   favicon: assets/images/avatar.png
 
   # Default values, taken from mkdocs_theme.yml
-  language: en
+  language: zh
   features:
     # - announce.dismiss
     - content.code.annotate
@@ -79,7 +79,6 @@ plugins:
     - print-site
     - tooltips
     - categories
-
 # Customization
 extra:
   
@@ -151,14 +150,15 @@ nav:
   - Home: index.md
   - Start: 'start.md'
   - Scrpts:
-    - Genshin_Impact_tts: Scripts/Genshin_Impact_tts.md
+    - Genshin_Impact_tts.lua: Scripts/Genshin_Impact_tts.md
   - Module:
-    - Print: Module/Print.md
+    - Print.lua: Module/Print.md
+  - Categories: './Categories'
   - About:
     - License: about/license.md
     - Release Notes: about/release-notes.md
-  - Rss: 'Rss.md'
-  - Announcement: 'Rss.md'  
+  - Rss:
+    - Announcement: 'Rss.md'  
   - Files:
     - Announcement: 'Files-Guide.md'
     - Scripts:

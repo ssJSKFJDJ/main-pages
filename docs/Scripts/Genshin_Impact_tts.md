@@ -1,5 +1,7 @@
 ---
 template: overrides/main.html
+categories:
+     - Lua
 ---
 
 # Genshin_Impact_tts.lua
@@ -286,19 +288,6 @@ end
 
 spaceKiller = function(str)
     return string.gsub(str, "[%s]+", "+")
-end
-
-getFileList = function(path)
-    local a = io.popen("dir " .. path .. "/")
-    local fileTable = {}
-
-    if a == nil then
-    else
-        for l in a:lines() do
-            table.insert(fileTable, l)
-        end
-    end
-    return fileTable
 end
 
 isFolderExist = function(folderPath)
