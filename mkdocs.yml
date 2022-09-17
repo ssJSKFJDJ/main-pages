@@ -149,26 +149,26 @@ extra_css:
 # Page tree
 nav:
   - Home: index.md
-  #- Start: 'start.md'
-  #- Scrpts:
-  #  - Genshin_Impact_tts: Scripts/Genshin_Impact_tts.md
-  #- Module:
-  #  - Print: Module/Print.md
-  #- About:
-  #  - License: about/license.md
-  #  - Release Notes: about/release-notes.md
-  #- Rss:
-  #  - Announcement: 'Rss.md'
-  #- Files:
-  #  - Announcement: 'Files-Guide.md'
-    #- Scripts:
-    #  - Guide for Scripts: 'Files-Scripts-Guide.md'
-    #  - ranking: 'Download/Scripts/ranking.lua'
-    #  - baseforge: 'Download/Scripts/baseforge.lua'
-    #- Module:
-    #  - Guide for Module: 'Files-Module-Guide.md'
-    #  - Print: 'Download/Module/Print.lua'
-    #- Print Page: './print_page/'
-  #- Update log:
-  #  - Last Created: 'last-created.md'
-  #  - Last Updated: 'last-updated.md'
+  - Start: 'start.md'
+  - Scrpts:
+    - Genshin_Impact_tts: Scripts/Genshin_Impact_tts.md
+  - Module:
+    - Print: Module/Print.md
+  - About:
+    - License: about/license.md
+    - Release Notes: about/release-notes.md
+  - Rss:
+  - Announcement: 'Rss.md'  
+  - Files:
+    - Announcement: 'Files-Guide.md'
+    - Scripts:
+      - Guide for Scripts: 'Files-Scripts-Guide.md'
+      - ranking: 'Download/Scripts/ranking.lua'
+      - baseforge: 'Download/Scripts/baseforge.lua'
+    - Module:
+      - Guide for Module: 'Files-Module-Guide.md'
+      - Print: 'Download/Module/Print.lua'
+    - Print Page: './print_page/'
+  - Update log:
+    - Last Created: 'last-created.md'
+    - Last Updated: 'last-updated.md'
