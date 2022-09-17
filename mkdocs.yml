@@ -157,7 +157,7 @@ nav:
   - Categories: './categories'
   - Scrpts:
     - Genshin_Impact_tts.lua: Scripts/Genshin_Impact_tts.md
-  - Module:
+  - Module: 
     - Print.lua: Module/Print.md
   - About:
     - License: about/license.md
@@ -174,6 +174,6 @@ nav:
       - Guide for Module: 'Files-Module-Guide.md'
       - Print: 'Download/Module/Print.lua'
     - Print Page: './print_page/'
-  - Update log:
+  - Updates:
     - Last Created: 'last-created.md'
     - Last Updated: 'last-updated.md'
