@@ -9,7 +9,7 @@ repo_url: https://github.com/cypress0522/ssJSKFJDJ/
 repo_name: cypress0522/ssJSKFJDJ
 
 # Copyright
-copyright: Copyright &copy; 2018 - 2022 简律纯.licensed under CC BY-NC-SA 4.0.
+copyright: Copyright &copy; 2018 - 2022 cypress0522:Licensed under CC BY-NC-SA 4.0.
 
 # Configuration
 theme:
@@ -81,20 +81,23 @@ plugins:
     - categories
 # Customization
 extra:
-  
-  feedback:
+  analytics:
+    provider: google
+    property: UA-XXXXXXXX-X 
+    feedback:
       title: 这篇文章有用吗？
       ratings:
-        - icon: material/heart
-          name: 我很喜欢。
+        - icon: material/thumb-up-outline
+          name: 太nm有用了，我要三连！
           data: 1
           note: >-
-              你真可爱~我会更加努力的✊
-        - icon: material/heart-broken
-          name: 不太喜欢。
+            你真可爱！
+        - icon: material/thumb-down-outline
+          name: 写的什么？
           data: 0
           note: >- 
-              真是个小坏蛋，那就来 <a href="https://cypress0522.github.io/about/" target="_blank" rel="noopener">这里</a> 提交建议吧。
+            你tmd也太可爱了吧。
+            点击<a href="https://cypress0522.github.io/about" target="_blank" rel="noopener">链接</a>来提交你的建议吧...
 
   social:
     - icon: fontawesome/solid/paper-plane
@@ -148,12 +151,14 @@ extra_css:
 # Page tree
 nav:
   - Home: index.md
-  - Start: 'start.md'
+  - Start: 
+    - Announcement: 'start.md'
+    - Guide: Guide.md
+  - Categories: './categories'
   - Scrpts:
     - Genshin_Impact_tts.lua: Scripts/Genshin_Impact_tts.md
   - Module:
     - Print.lua: Module/Print.md
-  - Categories: './Categories'
   - About:
     - License: about/license.md
     - Release Notes: about/release-notes.md

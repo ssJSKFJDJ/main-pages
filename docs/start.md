@@ -34,9 +34,8 @@ template: overrides/main.html
 ***
 
 
-## Guide
-	
-Welcome to [ssJSKFJDJ]{💕很好，又骗进来一个}。
+## Welcome 
+welcome to [ssJSKFJDJ]{💕很好，又骗进来一个}。
 
 这里是本人存放脚本支持并且更新源码的地方，
 如果[认为这对你或许很有帮助]{这样的感觉对我其实非常重要}，
@@ -55,7 +54,9 @@ Welcome to [ssJSKFJDJ]{💕很好，又骗进来一个}。
 template: overrides/main.html
 Date: xxxx-xx-xx
 Author: xxx
-Tag: xxx
+categories:
+     - Python
+	 - ...
 ---
 
 # 大标题

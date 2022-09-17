@@ -7,6 +7,13 @@
     "description": []
   },
   {
+    "title": "404 Not Found!",
+    "file_name": "404",
+    "url": "https://cypress0522.github.io/ssJSKFJDJ/404/",
+    "tags": [],
+    "description": []
+  },
+  {
     "title": "Announcement",
     "file_name": "Files-Guide",
     "url": "https://cypress0522.github.io/ssJSKFJDJ/Files-Guide/",
@@ -24,6 +31,13 @@
     "title": "Guide for Scripts",
     "file_name": "Files-Scripts-Guide",
     "url": "https://cypress0522.github.io/ssJSKFJDJ/Files-Scripts-Guide/",
+    "tags": [],
+    "description": []
+  },
+  {
+    "title": "Guide",
+    "file_name": "Guide",
+    "url": "https://cypress0522.github.io/ssJSKFJDJ/Guide/",
     "tags": [],
     "description": []
   },
@@ -49,7 +63,7 @@
     "description": []
   },
   {
-    "title": "Start",
+    "title": "Announcement",
     "file_name": "start",
     "url": "https://cypress0522.github.io/ssJSKFJDJ/start/",
     "tags": [],
