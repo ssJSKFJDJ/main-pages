@@ -1,0 +1,218 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+    <title>LuaMidi ♫ – The Lua library to read and write MIDI files</title>
+    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>LuaMidi ♫</h1>
+
+<ul>
+  <li><a href="../index.html">Index</a></li>
+</ul>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Getting_Started">Getting Started </a></li>
+<li><a href="#Contributing">Contributing </a></li>
+<li><a href="#Credits">Credits </a></li>
+</ul>
+
+
+<h2>Topics</h2>
+<ul class="">
+  <li><strong>README</strong></li>
+  <li><a href="../topics/Limitations_of_NoteEvent.md.html">Limitations_of_NoteEvent</a></li>
+  <li><a href="../topics/Timestamp.md.html">Timestamp</a></li>
+</ul>
+<h2>Modules</h2>
+<ul class="nowrap">
+  <li><a href="../modules/LuaMidi.html">LuaMidi</a></li>
+  <li><a href="../modules/Constants.html">Constants</a></li>
+  <li><a href="../modules/Util.html">Util</a></li>
+</ul>
+<h2>Classes</h2>
+<ul class="nowrap">
+  <li><a href="../classes/ArbitraryEvent.html">ArbitraryEvent</a></li>
+  <li><a href="../classes/Chunk.html">Chunk</a></li>
+  <li><a href="../classes/MetaEvent.html">MetaEvent</a></li>
+  <li><a href="../classes/NoteEvent.html">NoteEvent</a></li>
+  <li><a href="../classes/NoteOffEvent.html">NoteOffEvent</a></li>
+  <li><a href="../classes/NoteOnEvent.html">NoteOnEvent</a></li>
+  <li><a href="../classes/ProgramChangeEvent.html">ProgramChangeEvent</a></li>
+  <li><a href="../classes/Track.html">Track</a></li>
+  <li><a href="../classes/Writer.html">Writer</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+
+<h1>LuaMidi ♫ – The Lua library to read and write MIDI files</h1>
+
+
+<p align="justify"><strong>LuaMidi ♫</strong> is the pure Lua library to reading and writing MIDI files, with friendly API. As it provides MIDI data's total abstraction, it doesn't require the user to concern about technical stuff, such as delta time and NoteOn/NoteOff signals. Its methods are intuitive and its objects' data are completely human-readable.</p>
+
+
+<p>You can check the docs at <a href="https://github.com/PedroAlvesV/LuaMidi/wiki">the wiki</a>. <br/>
+Please, publish an <a href="https://github.com/PedroAlvesV/LuaMidi/issues">issue</a>, if you find any. <br/>
+This library doesn't have <strong>any</strong> dependencies.  </p>
+
+
+<p><a name="Getting_Started"></a></p>
+<h2>Getting Started</h2>
+
+<h3>Installation</h3>
+
+<p>To install LuaMidi, use <a href="https://github.com/luarocks/luarocks">LuaRocks</a>:</p>
+
+<pre><code> $ luarocks install luamidi
+</code></pre>
+
+
+<h3>Usage</h3>
+
+<p>Initially, it must import the main module:</p>
+
+
+<pre>
+<span class="keyword">local</span> LuaMidi = <span class="global">require</span> (<span class="string">'LuaMidi'</span>)
+</pre>
+
+
+<p>Once it's been done, all classes are available. <br/>
+Here is an example of how to write the C Major Scale:</p>
+
+
+<pre>
+<span class="keyword">local</span> LuaMidi = <span class="global">require</span> (<span class="string">'LuaMidi'</span>)
+<span class="keyword">local</span> Track = LuaMidi.Track
+<span class="keyword">local</span> NoteEvent = LuaMidi.NoteEvent
+<span class="keyword">local</span> Writer = LuaMidi.Writer
+
+<span class="comment">-- Creates Track instance
+</span><span class="keyword">local</span> track = Track.new()
+
+<span class="comment">-- Table with notes as strings (must specify octave)
+</span><span class="keyword">local</span> notes = {<span class="string">'C3'</span>, <span class="string">'D3'</span>, <span class="string">'E3'</span>, <span class="string">'F3'</span>, <span class="string">'G3'</span>, <span class="string">'A3'</span>, <span class="string">'B3'</span>, <span class="string">'C4'</span>}
+
+<span class="comment">-- Adds notes to Track
+</span>track:add_events(NoteEvent.new({pitch = notes, sequential = <span class="keyword">true</span>}))
+
+<span class="comment">-- Creates Writer passing Track
+</span><span class="keyword">local</span> writer = Writer.new(track)
+
+<span class="comment">-- Writes MIDI file called "C Major Scale.mid"
+</span>writer:save_MIDI(<span class="string">'C Major Scale'</span>)
+</pre>
+
+
+<p>Even though the above example creates a working MIDI file, it's encouragable to add some metadata to MIDI files. A more complete version of this code can be found here: <a href="https://github.com/PedroAlvesV/LuaMidi/tree/master/examples/c_major_scale.lua">examples/c<em>major</em>scale.lua</a></p>
+
+<p>This short script works over the basics of LuaMidi. Initially, it creates a <a href="../classes/Track.html#">Track</a> object. Then, it creates an array(<code>notes</code>) with the notes as strings. After that, it adds this array to a new <a href="../classes/NoteEvent.html#">NoteEvent</a>, also passing <code>true</code> as <code>sequential</code> field to indicate the notes won't be played at the same time. Once the track is ready, it creates a <a href="../classes/Writer.html#">Writer</a> object passing the track as parameter. With all tracks' data, the <a href="../classes/Writer.html#">Writer</a> can produce a working MIDI file.</p>
+
+<p>You can check the complete documentation at <a href="https://github.com/PedroAlvesV/LuaMidi/wiki">the wiki</a>.</p>
+
+<h3>Example</h3>
+
+<p>Stairway to Heaven (intro)</p>
+
+<pre>
+<span class="keyword">local</span> LuaMidi = <span class="global">require</span> (<span class="string">'LuaMidi'</span>)
+<span class="keyword">local</span> Track = LuaMidi.Track
+<span class="keyword">local</span> NoteEvent = LuaMidi.NoteEvent
+<span class="keyword">local</span> Writer = LuaMidi.Writer
+
+<span class="keyword">local</span> track = Track.new(<span class="string">"Intro"</span>)
+track:set_copyright(<span class="string">"(C) Led Zeppelin"</span>)
+track:set_instrument_name(<span class="string">"Acoustic Guitar"</span>)
+
+<span class="keyword">local</span> <span class="keyword">function</span> note(pitch, duration)
+   <span class="keyword">return</span> NoteEvent.new({pitch = pitch, duration = <span class="global">tostring</span>(duration)})
+<span class="keyword">end</span>
+
+<span class="keyword">local</span> A3 = note(<span class="string">'A3'</span>)
+<span class="keyword">local</span> C4 = note(<span class="string">'C4'</span>)
+<span class="keyword">local</span> E4 = note(<span class="string">'E4'</span>)
+<span class="keyword">local</span> A4 = note(<span class="string">'A4'</span>)
+<span class="keyword">local</span> Ab3_B4 = note({<span class="string">'G#3'</span>, <span class="string">'B4'</span>})
+<span class="keyword">local</span> B4 = note(<span class="string">'B4'</span>)
+<span class="keyword">local</span> G3_C5 = note({<span class="string">'G3'</span>, <span class="string">'C5'</span>})
+<span class="keyword">local</span> C5 = note(<span class="string">'C5'</span>)
+<span class="keyword">local</span> Gb3_Gb4 = note({<span class="string">'F#3'</span>, <span class="string">'F#4'</span>})
+<span class="keyword">local</span> D4 = note(<span class="string">'D4'</span>)
+<span class="keyword">local</span> Gb4 = note(<span class="string">'F#4'</span>)
+<span class="keyword">local</span> F3_E4 = note({<span class="string">'F3'</span>, <span class="string">'E4'</span>})
+<span class="keyword">local</span> long_C4 = note(<span class="string">'C4'</span>, <span class="number">2</span>)
+
+<span class="keyword">local</span> Am = {<span class="string">'A2'</span>, <span class="string">'E3'</span>, <span class="string">'A3'</span>, <span class="string">'C4'</span>}
+
+<span class="keyword">local</span> chord_GB = note({<span class="string">'B2'</span>, <span class="string">'D3'</span>, <span class="string">'G3'</span>, <span class="string">'B3'</span>})
+<span class="keyword">local</span> chord_Am = note(Am)
+<span class="keyword">local</span> long_chord_Am = note(Am, <span class="number">1</span>)
+
+track:add_events({
+   A3, C4, E4, A4, Ab3_B4, E4, C4, B4,
+   G3_C5, E4, C4, C5, Gb3_Gb4, D4, A3,
+   Gb4, F3_E4, C4, A3, long_C4, E4, C4, A3,
+   chord_GB, chord_Am, long_chord_Am
+})
+
+<span class="keyword">local</span> writer = Writer.new(track)
+writer:save_MIDI(<span class="string">'stairway_to_heaven'</span>, <span class="string">'midi files'</span>)
+</pre>
+
+
+<p>The produced MIDI file can be downloaded here: <a href="https://github.com/PedroAlvesV/LuaMidi/tree/master/examples/midi%20files/stairway_to_heaven.mid">stairway<em>to</em>heaven.mid</a></p>
+
+<p><a name="Contributing"></a></p>
+<h2>Contributing</h2>
+
+<ol>
+    <li>Create an issue and describe your contribution</li>
+    <li>Fork it (https://github.com/PedroAlvesV/LuaMidi/fork)</li>
+    <li>Create a new branch for your contribution (<code>git checkout -b my-contribution</code>)</li>
+    <li>Commit your changes (<code>git commit -am &apos;New feature added&apos;</code>)</li>
+    <li>Publish the branch (<code>git push origin my-contribution</code>)</li>
+    <li>Create a Pull Request</li>
+    <li>Done :white<em>check</em>mark:</li>
+</ol>
+
+<p><a name="Credits"></a></p>
+<h2>Credits</h2>
+
+<ul>
+    <li>Lua library written by <a href="https://github.com/PedroAlvesV">Pedro Alves</a></li>
+    <li>Inspired by <a href="https://github.com/grimmdude/MidiWriterJS">♬ MidiWriterJS</a>, by <a href="http://grimmdude.com">Garrett Grimm</a></li>
+</ul>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
+<i style="float:right;">Last updated 2020-02-28 01:36:33 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>

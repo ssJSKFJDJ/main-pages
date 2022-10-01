@@ -1338,7 +1338,7 @@
                         <h1 class='nav-section-title' id='section-start'>
                             Start <a class='headerlink' href='#section-start' title='Permanent link'>↵</a>
                         </h1>
-                        <section class="print-page" id="start"><p>&laquo; So, take her wrap, fellas &raquo;</p>
+                        <section class="print-page" id="start"><p>&laquo; You're still goin' strong &raquo;</p>
 <h1 id="start-hallo">Hallo!<a class="headerlink" href="#start-hallo" title="Permanent link">&para;</a></h1>
 <details class="done inline" open="open">
 <summary><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M3.75 1.5a.25.25 0 0 0-.25.25v12.5c0 .138.112.25.25.25h9.5a.25.25 0 0 0 .25-.25V4.664a.25.25 0 0 0-.073-.177l-2.914-2.914a.25.25 0 0 0-.177-.073H3.75zM2 1.75C2 .784 2.784 0 3.75 0h6.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v9.586A1.75 1.75 0 0 1 13.25 16h-9.5A1.75 1.75 0 0 1 2 14.25V1.75zm6.23 3.508a.75.75 0 0 1 .755.745l.01 1.497h1.497a.75.75 0 0 1 0 1.5H9v1.507a.75.75 0 0 1-1.5 0V9.005l-1.502.01a.75.75 0 1 1-.01-1.5l1.507-.01-.01-1.492a.75.75 0 0 1 .745-.755z"/></svg></span> 最近创建</summary>
@@ -2002,15 +2002,8 @@ of this license document, but changing it is not allowed.
 </blockquote>
 <h2 id="module-listen2me-wiki-welcome">Welcome<a class="headerlink" href="#module-listen2me-wiki-welcome" title="Permanent link">&para;</a></h2>
 <p>欢迎来到wiki页面，这个wiki旨在说明通过 <strong>Midido ♫</strong> 提供的一切方法写出MIDI文件的方法和过程。如果你在这里没有找到如何对自己有帮助的内容，请发布issue，我会尽快回复哦。</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>这个wiki仍然在建设中，许多页面可能会缺失，请耐心等待页面的创建和完善。在此期间你可以订阅本站的RSS，及时获取最新的更新内容。</p>
-</div>
-<h2 id="module-listen2me-wiki-pages">Pages<a class="headerlink" href="#module-listen2me-wiki-pages" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Usage</li>
-</ul>
-<h2 id="module-listen2me-wiki-usage">Usage<a class="headerlink" href="#module-listen2me-wiki-usage" title="Permanent link">&para;</a></h2>
+<h2 id="module-listen2me-wiki-guide">Guide<a class="headerlink" href="#module-listen2me-wiki-guide" title="Permanent link">&para;</a></h2>
+<h3 id="module-listen2me-wiki-usage">Usage<a class="headerlink" href="#module-listen2me-wiki-usage" title="Permanent link">&para;</a></h3>
 <ol>
 <li>导入主模块:</li>
 </ol>
@@ -2041,6 +2034,377 @@ of this license document, but changing it is not allowed.
 </code></pre></div>
 <p>由于代码中已经有一些注释，因此不需要对其再进行解释说明。 这是 MIDI 文件构建的基本步骤。 有一个更复杂的例子可以在 Writing Stairway to Heaven 中看到。
 有关它的进一步说明，请查看 类 页面。</p>
+<h2 id="module-listen2me-wiki-classes">Classes<a class="headerlink" href="#module-listen2me-wiki-classes" title="Permanent link">&para;</a></h2>
+<h3 id="module-listen2me-wiki-summary">Summary<a class="headerlink" href="#module-listen2me-wiki-summary" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="#module-listen2me-wiki-noteevent">NoteEvent</a></li>
+<li><a href="#module-listen2me-wiki-programchangeevent">ProgramChangeEvent</a></li>
+<li><a href="#module-listen2me-wiki-track">Track</a></li>
+<li><a href="#module-listen2me-wiki-writer">Writer</a></li>
+<li><a href="#module-listen2me-wiki-Midido">Midido</a></li>
+</ul>
+<h3 id="module-listen2me-wiki-noteevent">NoteEvent<a class="headerlink" href="#module-listen2me-wiki-noteevent" title="Permanent link">&para;</a></h3>
+<h4 id="module-listen2me-wiki-description">Description<a class="headerlink" href="#module-listen2me-wiki-description" title="Permanent link">&para;</a></h4>
+<p>Arguably, the core of the API. It holds every aspect of a MIDI note "process". I call it <em>process</em> because it requires two signals: one to start and another to end the note. There's also the <em>delta-time</em>, which is <a href="http://sites.uci.edu/camp2014/2014/05/19/timing-in-midi-files/">not an intuitive concept</a>. So, the NoteEvent class wraps it all and is, therefore, a bridge between an easily readable <em>note</em> concept and the MIDI format NoteOn+NoteOff event(s).</p>
+<h4 id="module-listen2me-wiki-usage_1">Usage<a class="headerlink" href="#module-listen2me-wiki-usage_1" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#module-listen2me-wiki-__codelineno-2-1"></a><span class="c1">-- Creates a simple C note</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#module-listen2me-wiki-__codelineno-2-2"></a><span class="n">NoteEvent</span><span class="p">.</span><span class="n">new</span><span class="p">({</span><span class="n">pitch</span> <span class="o">=</span> <span class="s1">&#39;C4&#39;</span><span class="p">})</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#module-listen2me-wiki-__codelineno-2-3"></a><span class="c1">-- Alternatively</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#module-listen2me-wiki-__codelineno-2-4"></a><span class="n">NoteEvent</span><span class="p">.</span><span class="n">new</span><span class="p">({</span><span class="n">pitch</span> <span class="o">=</span> <span class="mi">60</span><span class="p">})</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#module-listen2me-wiki-__codelineno-2-5"></a>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#module-listen2me-wiki-__codelineno-2-6"></a><span class="c1">-- Creates an E5 chord (with default length of a quarter note)</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#module-listen2me-wiki-__codelineno-2-7"></a><span class="n">NoteEvent</span><span class="p">.</span><span class="n">new</span><span class="p">({</span><span class="n">pitch</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;E3&#39;</span><span class="p">,</span> <span class="s1">&#39;B3&#39;</span><span class="p">}})</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#module-listen2me-wiki-__codelineno-2-8"></a>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#module-listen2me-wiki-__codelineno-2-9"></a><span class="c1">-- Creates an A minor chord arpeggio event(s sequence) (with each note lasting an eighth note)</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#module-listen2me-wiki-__codelineno-2-10"></a><span class="n">NoteEvent</span><span class="p">.</span><span class="n">new</span><span class="p">({</span><span class="n">pitch</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;A3&#39;</span><span class="p">,</span> <span class="s1">&#39;C4&#39;</span><span class="p">,</span> <span class="s1">&#39;E4&#39;</span><span class="p">,</span> <span class="s1">&#39;C5&#39;</span><span class="p">,</span> <span class="s1">&#39;E5&#39;</span><span class="p">},</span> <span class="n">duration</span> <span class="o">=</span> <span class="s1">&#39;8&#39;</span><span class="p">,</span> <span class="n">sequential</span> <span class="o">=</span> <span class="kc">true</span><span class="p">})</span>
+</code></pre></div>
+<h4 id="module-listen2me-wiki-properties">Properties<a class="headerlink" href="#module-listen2me-wiki-properties" title="Permanent link">&para;</a></h4>
+<table>
+    <thead>
+        <tr align="center">
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><b>pitch</b></td>
+            <td>string, number or array</td>
+            <td>Note (or array of notes) to be triggered. Can be a string or valid MIDI note code.  Format for string is <code>C#4</code>.</td>
+        </tr>
+        <tr bgcolor="#dddddd">
+            <td><b>duration</b></td>
+            <td>string or array</td>
+            <td>
+                How long the note should sound.
+                <ul>
+                    <li><code>1</code>  : whole</li>
+                    <li><code>2</code>  : half</li>
+                    <li><code>d2</code> : dotted half</li>
+                    <li><code>4</code>  : quarter</li>
+                    <li><code>d4</code> : dotted quarter</li>
+                    <li><code>8</code>  : eighth</li>
+                    <li><code>8t</code> : eighth triplet</li>
+                    <li><code>d8</code> : dotted eighth</li>
+                    <li><code>16</code> : sixteenth</li>
+                    <li><code>Tn</code> : where n is an explicit number of ticks</li>
+                </ul>
+                If an array of durations is passed then the sum of the durations will be used.
+            </td>
+        </tr>
+        <tr>
+            <td><b>rest</b></td>
+            <td>string</td>
+            <td>Rest before sounding note.  Takes same values as <b>duration</b>.</td>
+        </tr>
+        <tr bgcolor="#dddddd">
+          <td><b>velocity</b></td>
+            <td>number</td>
+            <td>How loud the note should sound, values 1-100.  Default: <code>50</code></td>
+        </tr>
+        <tr>
+            <td><b>sequential</b></td>
+            <td>boolean</td>
+            <td>If true then array of pitches will be played sequentially as opposed to simulatanously.  Default: <code>false</code></td>
+        </tr>
+        <tr bgcolor="#dddddd">
+            <td><b>repetition</b></td>
+            <td>number</td>
+            <td>How many times this event should be repeated. Default: <code>1</code></td>
+        </tr>
+        <tr>
+            <td><b>channel</b></td>
+            <td>number</td>
+            <td>MIDI channel to use. Default: <code>1</code></td>
+        </tr>
+    </tbody>
+</table>
+
+<h4 id="module-listen2me-wiki-methods">Methods<a class="headerlink" href="#module-listen2me-wiki-methods" title="Permanent link">&para;</a></h4>
+<table>
+    <tr>
+    <td class="name" nowrap><a href="https://pedroalvesv.github.io/Midido/classes/NoteEvent.html#NoteEvent:new">NoteEvent:new (fields)</a></td>
+    <td class="summary">Creates a new NoteEvent.</td>
+    </tr>
+    <tr>
+    <td class="name" nowrap><a href="https://pedroalvesv.github.io/Midido/classes/NoteEvent.html#NoteEvent:print">NoteEvent:print ()</a></td>
+    <td class="summary">Prints event's data in a human-friendly style</td>
+    </tr>
+    <tr>
+    <td class="name" nowrap><a href="https://pedroalvesv.github.io/Midido/classes/NoteEvent.html#NoteEvent:set_pitch">NoteEvent:set_pitch (pitch)</a></td>
+    <td class="summary">Sets NoteEvent's pitch</td>
+    </tr>
+    <tr>
+    <td class="name" nowrap><a href="https://pedroalvesv.github.io/Midido/classes/NoteEvent.html#NoteEvent:set_duration">NoteEvent:set_duration (duration)</a></td>
+    <td class="summary">Sets NoteEvent's duration</td>
+    </tr>
+    <tr>
+    <td class="name" nowrap><a href="https://pedroalvesv.github.io/Midido/classes/NoteEvent.html#NoteEvent:set_rest">NoteEvent:set_rest (rest)</a></td>
+    <td class="summary">Sets NoteEvent's rest</td>
+    </tr>
+    <tr>
+    <td class="name" nowrap><a href="https://pedroalvesv.github.io/Midido/classes/NoteEvent.html#NoteEvent:set_velocity">NoteEvent:set_velocity (velocity)</a></td>
+    <td class="summary">Sets NoteEvent's velocity</td>
+    </tr>
+    <tr>
+    <td class="name" nowrap><a href="https://pedroalvesv.github.io/Midido/classes/NoteEvent.html#NoteEvent:set_sequential">NoteEvent:set_sequential (sequential)</a></td>
+    <td class="summary">Sets NoteEvent's sequential property</td>
+    </tr>
+    <tr>
+    <td class="name" nowrap><a href="https://pedroalvesv.github.io/Midido/classes/NoteEvent.html#NoteEvent:set_repetition">NoteEvent:set_repetition (repetition)</a></td>
+    <td class="summary">Sets NoteEvent's repetition</td>
+    </tr>
+    <tr>
+    <td class="name" nowrap><a href="https://pedroalvesv.github.io/Midido/classes/NoteEvent.html#NoteEvent:set_channel">NoteEvent:set_channel (channel)</a></td>
+    <td class="summary">Sets NoteEvent's channel</td>
+    </tr>
+    <tr>
+    <td class="name" nowrap><a href="https://pedroalvesv.github.io/Midido/classes/NoteEvent.html#NoteEvent:get_pitch">NoteEvent:get_pitch ()</a></td>
+    <td class="summary">Gets pitch(es) of NoteEvent</td>
+    </tr>
+    <tr>
+    <td class="name" nowrap><a href="https://pedroalvesv.github.io/Midido/classes/NoteEvent.html#NoteEvent:get_duration">NoteEvent:get_duration ()</a></td>
+    <td class="summary">Gets duration of NoteEvent</td>
+    </tr>
+    <tr>
+    <td class="name" nowrap><a href="https://pedroalvesv.github.io/Midido/classes/NoteEvent.html#NoteEvent:get_rest">NoteEvent:get_rest ()</a></td>
+    <td class="summary">Gets rest duration of NoteEvent</td>
+    </tr>
+    <tr>
+    <td class="name" nowrap><a href="https://pedroalvesv.github.io/Midido/classes/NoteEvent.html#NoteEvent:get_velocity">NoteEvent:get_velocity ()</a></td>
+    <td class="summary">Gets velocity of NoteEvent</td>
+    </tr>
+    <tr>
+    <td class="name" nowrap><a href="https://pedroalvesv.github.io/Midido/classes/NoteEvent.html#NoteEvent:get_sequential">NoteEvent:get_sequential ()</a></td>
+    <td class="summary">Gets sequentiallity of NoteEvent</td>
+    </tr>
+    <tr>
+    <td class="name" nowrap><a href="https://pedroalvesv.github.io/Midido/classes/NoteEvent.html#NoteEvent:get_repetition">NoteEvent:get_repetition ()</a></td>
+    <td class="summary">Gets repetition value of NoteEvent</td>
+    </tr>
+    <tr>
+    <td class="name" nowrap><a href="https://pedroalvesv.github.io/Midido/classes/NoteEvent.html#NoteEvent:get_channel">NoteEvent:get_channel ()</a></td>
+    <td class="summary">Gets channel # of NoteEvent</td>
+    </tr>
+</table>
+
+<h4 id="module-listen2me-wiki-external-links">External links<a class="headerlink" href="#module-listen2me-wiki-external-links" title="Permanent link">&para;</a></h4>
+<ul>
+<li><a href="https://www.noterepeat.com/articles/how-to/213-midi-basics-common-terms-explained#F">https://www.noterepeat.com/articles/how-to/213-midi-basics-common-terms-explained#F</a></li>
+<li><a href="https://www.cs.cmu.edu/~music/cmsip/readings/MIDI%20tutorial%20for%20programmers.html">https://www.cs.cmu.edu/~music/cmsip/readings/MIDI%20tutorial%20for%20programmers.html</a></li>
+<li><a href="http://entertainment.howstuffworks.com/midi1.htm">http://entertainment.howstuffworks.com/midi1.htm</a></li>
+<li><a href="http://www.homerecordinghub.com/midi.html">http://www.homerecordinghub.com/midi.html</a></li>
+<li><a href="http://midi.teragonaudio.com/tutr/notenum.htm">http://midi.teragonaudio.com/tutr/notenum.htm</a></li>
+<li><a href="http://midi.teragonaudio.com/tech/midispec/noteon.htm">http://midi.teragonaudio.com/tech/midispec/noteon.htm</a></li>
+<li><a href="http://midi.teragonaudio.com/tech/midispec/noteoff.htm">http://midi.teragonaudio.com/tech/midispec/noteoff.htm</a></li>
+</ul>
+<h3 id="module-listen2me-wiki-programchangeevent">ProgramChangeEvent<a class="headerlink" href="#module-listen2me-wiki-programchangeevent" title="Permanent link">&para;</a></h3>
+<h4 id="module-listen2me-wiki-description_1">Description<a class="headerlink" href="#module-listen2me-wiki-description_1" title="Permanent link">&para;</a></h4>
+<p>A ProgramChangeEvent makes it possible to change the "program" of a channel, which is, for the first 15 channels and most of MIDI devices, changing the <em>instrument sound</em>. This event is mostly the same as the raw MIDI data. That's due to the fact that this is one of the shortest events, being just 2 bytes long.</p>
+<h4 id="module-listen2me-wiki-usage_2">Usage<a class="headerlink" href="#module-listen2me-wiki-usage_2" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#module-listen2me-wiki-__codelineno-3-1"></a><span class="c1">-- Sets the instrument sound or &quot;program&quot; to #25, which is usually the Nylon Guitar</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#module-listen2me-wiki-__codelineno-3-2"></a><span class="n">ProgramChangeEvent</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">25</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="module-listen2me-wiki-properties_1">Properties<a class="headerlink" href="#module-listen2me-wiki-properties_1" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>pcnumber</td>
+<td>number</td>
+<td>a valid MIDI patch change number</td>
+</tr>
+</tbody>
+</table>
+<h4 id="module-listen2me-wiki-methods_1">Methods<a class="headerlink" href="#module-listen2me-wiki-methods_1" title="Permanent link">&para;</a></h4>
+<table>
+    <tr>
+    <td class="name" nowrap><a href="https://pedroalvesv.github.io/Midido/classes/ProgramChangeEvent.html#ProgramChangeEvent:new">ProgramChangeEvent:new (pcnumber)</a></td>
+    <td class="summary">Creates a new ProgramChangeEvent to change the
+ track's instrument</td>
+    </tr>
+    <tr>
+    <td class="name" nowrap><a href="https://pedroalvesv.github.io/Midido/classes/ProgramChangeEvent.html#ProgramChangeEvent:print">ProgramChangeEvent:print ()</a></td>
+    <td class="summary">Prints event's data in a human-friendly style</td>
+    </tr>
+    <tr>
+    <td class="name" nowrap><a href="https://pedroalvesv.github.io/Midido/classes/ProgramChangeEvent.html#ProgramChangeEvent:set_value">ProgramChangeEvent:set_value (value)</a></td>
+    <td class="summary">Sets ProgramChangeEvent's value</td>
+    </tr>
+    <tr>
+    <td class="name" nowrap><a href="https://pedroalvesv.github.io/Midido/classes/ProgramChangeEvent.html#ProgramChangeEvent:get_value">ProgramChangeEvent:get_value ()</a></td>
+    <td class="summary">Gets ProgramChangeEvent's value</td>
+    </tr>
+</table>
+
+<h4 id="module-listen2me-wiki-external-links_1">External links<a class="headerlink" href="#module-listen2me-wiki-external-links_1" title="Permanent link">&para;</a></h4>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/General_MIDI#Program_change_events">https://en.wikipedia.org/wiki/General_MIDI#Program_change_events</a></li>
+<li><a href="http://midi.teragonaudio.com/tech/midispec/pgm.htm">http://midi.teragonaudio.com/tech/midispec/pgm.htm</a></li>
+<li><a href="http://midi.teragonaudio.com/tech/midispec.htm">http://midi.teragonaudio.com/tech/midispec.htm</a></li>
+<li><a href="https://www.noterepeat.com/articles/how-to/213-midi-basics-common-terms-explained#H">https://www.noterepeat.com/articles/how-to/213-midi-basics-common-terms-explained#H</a></li>
+</ul>
+<h3 id="module-listen2me-wiki-track">Track<a class="headerlink" href="#module-listen2me-wiki-track" title="Permanent link">&para;</a></h3>
+<h4 id="module-listen2me-wiki-description_2">Description<a class="headerlink" href="#module-listen2me-wiki-description_2" title="Permanent link">&para;</a></h4>
+<p>An abstraction to represent a MIDI track. It comprises the events (Note, Meta and ProgramChange) and handles it's own setup data, as its header (MTrk) and its <a href="http://www.recordingblogs.com/sa/Wiki/topic/MIDI-End-of-Track-meta-message">meta-event ending</a>. Because MIDI meta events are always tied to tracks, <strong>Midido ♫</strong> doesn't expect the user to directly create MetaEvents (which <em>is</em> an API class) objects, but to use Track's methods instead. These methods manage to create these objects and configure them.</p>
+<h4 id="module-listen2me-wiki-usage_3">Usage<a class="headerlink" href="#module-listen2me-wiki-usage_3" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#module-listen2me-wiki-__codelineno-4-1"></a><span class="c1">-- Creates a new Track</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#module-listen2me-wiki-__codelineno-4-2"></a><span class="n">Track</span><span class="p">.</span><span class="n">new</span><span class="p">()</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#module-listen2me-wiki-__codelineno-4-3"></a>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#module-listen2me-wiki-__codelineno-4-4"></a><span class="c1">-- Creates a new Track with a &quot;name&quot; meta event (set as &quot;Track1&quot;)</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#module-listen2me-wiki-__codelineno-4-5"></a><span class="kd">local</span> <span class="n">trk</span> <span class="o">=</span> <span class="n">Track</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="s2">&quot;Track1&quot;</span><span class="p">)</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#module-listen2me-wiki-__codelineno-4-6"></a>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#module-listen2me-wiki-__codelineno-4-7"></a><span class="c1">-- Adds a NoteEvent to the Track</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#module-listen2me-wiki-__codelineno-4-8"></a><span class="n">trk</span><span class="p">:</span><span class="n">add_events</span><span class="p">(</span><span class="n">NoteEvent</span><span class="p">.</span><span class="n">new</span><span class="p">({</span><span class="n">pitch</span><span class="o">=</span><span class="s1">&#39;C4&#39;</span><span class="p">}))</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#module-listen2me-wiki-__codelineno-4-9"></a>
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#module-listen2me-wiki-__codelineno-4-10"></a><span class="c1">-- Adds a ProgramChangeEvent and adds a MetaEvent to describe which instrument it is supposed to be</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#module-listen2me-wiki-__codelineno-4-11"></a><span class="n">trk</span><span class="p">:</span><span class="n">add_events</span><span class="p">(</span><span class="n">ProgramChangeEvent</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">25</span><span class="p">)):</span><span class="n">set_instrument_name</span><span class="p">(</span><span class="s2">&quot;Nylon Guitar&quot;</span><span class="p">)</span>
+</code></pre></div>
+<h4 id="module-listen2me-wiki-properties_2">Properties<a class="headerlink" href="#module-listen2me-wiki-properties_2" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>data</td>
+<td>array</td>
+<td>events' binary data to be built by the Writer</td>
+</tr>
+<tr>
+<td>size</td>
+<td>array</td>
+<td>binary data size to be built by the Writer</td>
+</tr>
+<tr>
+<td>events</td>
+<td>array</td>
+<td>events' objects</td>
+</tr>
+<tr>
+<td>metadata</td>
+<td>array</td>
+<td>readable metadata</td>
+</tr>
+</tbody>
+</table>
+<h4 id="module-listen2me-wiki-methods_2">Methods<a class="headerlink" href="#module-listen2me-wiki-methods_2" title="Permanent link">&para;</a></h4>
+<table>
+    <tr>
+    <td class="name" nowrap><a href="https://pedroalvesv.github.io/Midido/classes/Track.html#Track:new">Track:new ([name])</a></td>
+    <td class="summary">Creates a new Track</td>
+    </tr>
+    <tr>
+    <td class="name" nowrap><a href="https://pedroalvesv.github.io/Midido/classes/Track.html#Track:add_events">Track:add_events (events, map_function)</a></td>
+    <td class="summary">Adds an event-list (or single event) to the track.</td>
+    </tr>
+    <tr>
+    <td class="name" nowrap><a href="https://pedroalvesv.github.io/Midido/classes/Track.html#Track:get_events">Track:get_events (filter)</a></td>
+    <td class="summary">Gets events from Track</td>
+    </tr>
+    <tr>
+    <td class="name" nowrap><a href="https://pedroalvesv.github.io/Midido/classes/Track.html#Track:set_tempo">Track:set_tempo (bpm)</a></td>
+    <td class="summary">Sets Track's tempo</td>
+    </tr>
+    <tr>
+    <td class="name" nowrap><a href="https://pedroalvesv.github.io/Midido/classes/Track.html#Track:set_time_signature">Track:set_time_signature (num, den[, midi_clocks_tick=<code>24</code>[, notes_midi_clock=<code>8</code>]])</a></td>
+    <td class="summary">Sets Track's time signature</td>
+    </tr>
+    <tr>
+    <td class="name" nowrap><a href="https://pedroalvesv.github.io/Midido/classes/Track.html#Track:set_key_signature">Track:set_key_signature (sf, mi)</a></td>
+    <td class="summary">Sets Track's key signature</td>
+    </tr>
+    <tr>
+    <td class="name" nowrap><a href="https://pedroalvesv.github.io/Midido/classes/Track.html#Track:set_text">Track:set_text (text)</a></td>
+    <td class="summary">Sets text to Track</td>
+    </tr>
+    <tr>
+    <td class="name" nowrap><a href="https://pedroalvesv.github.io/Midido/classes/Track.html#Track:set_copyright">Track:set_copyright (copyright)</a></td>
+    <td class="summary">Sets copyright to Track</td>
+    </tr>
+    <tr>
+    <td class="name" nowrap><a href="https://pedroalvesv.github.io/Midido/classes/Track.html#Track:set_name">Track:set_name (name)</a></td>
+    <td class="summary">Sets a name to Track</td>
+    </tr>
+    <tr>
+    <td class="name" nowrap><a href="https://pedroalvesv.github.io/Midido/classes/Track.html#Track:set_instrument_name">Track:set_instrument_name (instrument_name)</a></td>
+    <td class="summary">Sets instrument name to Track</td>
+    </tr>
+    <tr>
+    <td class="name" nowrap><a href="https://pedroalvesv.github.io/Midido/classes/Track.html#Track:set_lyric">Track:set_lyric (lyric)</a></td>
+    <td class="summary">Sets lyric to Track</td>
+    </tr>
+    <tr>
+    <td class="name" nowrap><a href="https://pedroalvesv.github.io/Midido/classes/Track.html#Track:set_marker">Track:set_marker (marker)</a></td>
+    <td class="summary">Sets marker text to Track</td>
+    </tr>
+    <tr>
+    <td class="name" nowrap><a href="https://pedroalvesv.github.io/Midido/classes/Track.html#Track:set_cue_point">Track:set_cue_point (cue_point)</a></td>
+    <td class="summary">Sets cue point to Track</td>
+    </tr>
+    <tr>
+    <td class="name" nowrap><a href="https://pedroalvesv.github.io/Midido/classes/Track.html#Track:poly_mode_on">Track:poly_mode_on ()</a></td>
+    <td class="summary">Activates poly mode</td>
+    </tr>
+    <tr>
+    <td class="name" nowrap><a href="https://pedroalvesv.github.io/Midido/classes/Track.html#Track:get_text">Track:get_text ()</a></td>
+    <td class="summary">Gets text from Track</td>
+    </tr>
+    <tr>
+    <td class="name" nowrap><a href="https://pedroalvesv.github.io/Midido/classes/Track.html#Track:get_copyright">Track:get_copyright ()</a></td>
+    <td class="summary">Gets copyright from Track</td>
+    </tr>
+    <tr>
+    <td class="name" nowrap><a href="https://pedroalvesv.github.io/Midido/classes/Track.html#Track:get_name">Track:get_name ()</a></td>
+    <td class="summary">Gets name from Track</td>
+    </tr>
+    <tr>
+    <td class="name" nowrap><a href="https://pedroalvesv.github.io/Midido/classes/Track.html#Track:get_instrument_name">Track:get_instrument_name ()</a></td>
+    <td class="summary">Gets instrument name from Track</td>
+    </tr>
+    <tr>
+    <td class="name" nowrap><a href="https://pedroalvesv.github.io/Midido/classes/Track.html#Track:get_lyric">Track:get_lyric ()</a></td>
+    <td class="summary">Gets lyric from Track</td>
+    </tr>
+    <tr>
+    <td class="name" nowrap><a href="https://pedroalvesv.github.io/Midido/classes/Track.html#Track:get_marker">Track:get_marker ()</a></td>
+    <td class="summary">Gets marker from Track</td>
+    </tr>
+    <tr>
+    <td class="name" nowrap><a href="https://pedroalvesv.github.io/Midido/classes/Track.html#Track:get_cue_point">Track:get_cue_point ()</a></td>
+    <td class="summary">Gets cue point from Track</td>
+    </tr>
+</table>
+
+<h4 id="module-listen2me-wiki-external-links_2">External links<a class="headerlink" href="#module-listen2me-wiki-external-links_2" title="Permanent link">&para;</a></h4>
+<ul>
+<li><a href="http://www.somascape.org/midi/tech/mfile.html#mtrk">http://www.somascape.org/midi/tech/mfile.html#mtrk</a></li>
+<li><a href="http://www.homerecordinghub.com/midi-channels.html">http://www.homerecordinghub.com/midi-channels.html</a></li>
+<li><a href="http://www.somascape.org/midi/tech/mfile.html#meta">http://www.somascape.org/midi/tech/mfile.html#meta</a></li>
+</ul>
+<h3 id="module-listen2me-wiki-writer">Writer<a class="headerlink" href="#module-listen2me-wiki-writer" title="Permanent link">&para;</a></h3>
+<h4 id="module-listen2me-wiki-description_3">Description<a class="headerlink" href="#module-listen2me-wiki-description_3" title="Permanent link">&para;</a></h4>
+<h4 id="module-listen2me-wiki-properties_3">Properties<a class="headerlink" href="#module-listen2me-wiki-properties_3" title="Permanent link">&para;</a></h4>
+<h4 id="module-listen2me-wiki-methods_3">Methods<a class="headerlink" href="#module-listen2me-wiki-methods_3" title="Permanent link">&para;</a></h4>
+<h3 id="module-listen2me-wiki-midido_1">Midido<a class="headerlink" href="#module-listen2me-wiki-midido_1" title="Permanent link">&para;</a></h3>
+<h4 id="module-listen2me-wiki-description_4">Description<a class="headerlink" href="#module-listen2me-wiki-description_4" title="Permanent link">&para;</a></h4>
+<h4 id="module-listen2me-wiki-properties_4">Properties<a class="headerlink" href="#module-listen2me-wiki-properties_4" title="Permanent link">&para;</a></h4>
+<h4 id="module-listen2me-wiki-methods_4">Methods<a class="headerlink" href="#module-listen2me-wiki-methods_4" title="Permanent link">&para;</a></h4>
+<h2 id="module-listen2me-wiki-api">API<a class="headerlink" href="#module-listen2me-wiki-api" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>你可以在<a href="#module-listen2me-wiki-cypress0522.github.io-ssjskfjdj-midido-api">这里</a>看到API的更详细信息。</p>
+</blockquote>
 <h2 id="module-listen2me-wiki-categories">Categories<a class="headerlink" href="#module-listen2me-wiki-categories" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="#categories-lua">Lua</a></li>
@@ -2776,11 +3140,11 @@ of this license document, but changing it is not allowed.
                         <h2 class='nav-section-title' id='section-scripts'>
                             Scripts <a class='headerlink' href='#section-scripts' title='Permanent link'>↵</a>
                         </h2>
-                        <section class="print-page" id="files-scripts-guide"><p>&laquo; While the band's playin' &raquo;</p></section><h1 class='nav-section-title-end'>Ended: Scripts</h1>
+                        <section class="print-page" id="files-scripts-guide"><p>&laquo; You're still glowin', you're still crowin' &raquo;</p></section><h1 class='nav-section-title-end'>Ended: Scripts</h1>
                         <h2 class='nav-section-title' id='section-module'>
                             Module <a class='headerlink' href='#section-module' title='Permanent link'>↵</a>
                         </h2>
-                        <section class="print-page" id="files-module-guide"><p>&laquo; You're lookin' swell, Dolly &raquo;</p></section><h1 class='nav-section-title-end'>Ended: Module</h1><h1 class='nav-section-title-end'>Ended: Files</h1>
+                        <section class="print-page" id="files-module-guide"><p>&laquo; I can tell, Dolly &raquo;</p></section><h1 class='nav-section-title-end'>Ended: Module</h1><h1 class='nav-section-title-end'>Ended: Files</h1>
                         <h1 class='nav-section-title' id='section-updates'>
                             Updates <a class='headerlink' href='#section-updates' title='Permanent link'>↵</a>
                         </h1>
