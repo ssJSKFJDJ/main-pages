@@ -172,7 +172,7 @@ nav:
       - baseforge: 'Download/Scripts/baseforge.lua'
     - Module:
       - Guide for Module: 'Files-Module-Guide.md'
-      - Print: 'Download/Module/Print.lua'
+      - Print: 'Download/Module/print.lua'
     - Print Page: './print_page/'
   - Updates:
     - Last Created: 'last-created.md'
