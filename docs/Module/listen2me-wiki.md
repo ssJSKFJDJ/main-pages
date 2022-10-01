@@ -8,7 +8,7 @@ categories:
 
 > wiki页面
 
-<p align="justify"><strong>LuaMidi ♫</strong> is the pure Lua library to reading and writing MIDI files, with friendly API. As it provides MIDI data's total abstraction, it doesn't require the user to concern about technical stuff, such as delta time and NoteOn/NoteOff signals. Its methods are intuitive and its objects' data are completely human-readable.</p>  
+<p align="justify"><strong>listen2me ♫</strong> is the pure Lua library to reading and writing MIDI files, with friendly API. As it provides MIDI data's total abstraction, it doesn't require the user to concern about technical stuff, such as delta time and NoteOn/NoteOff signals. Its methods are intuitive and its objects' data are completely human-readable.</p>  
 This library doesn't have <strong>any</strong> dependencies.  
 
 ## Welcome
