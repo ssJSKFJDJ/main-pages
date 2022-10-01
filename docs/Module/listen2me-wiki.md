@@ -5,30 +5,52 @@ categories:
 ---
 
 # listen2me - wiki ♫ 
-
-> wiki页面
-
-<p align="justify"><strong>listen2me ♫</strong> is the pure Lua library to reading and writing MIDI files, with friendly API. As it provides MIDI data's total abstraction, it doesn't require the user to concern about technical stuff, such as delta time and NoteOn/NoteOff signals. Its methods are intuitive and its objects' data are completely human-readable.</p>  
-This library doesn't have <strong>any</strong> dependencies.  
+> ## Midido ♫
+一个用于读写MIDI文件，且具有十分友好的API的Lua扩库。它提供的MIDI数据是完全抽象的，因此并不需要用户担心那些诸如增量时间(Delta Time)和音符信号(NoteOn/NoteOff)这样的技术问题。它的方法是直观且具体的，同时对象数据也具有良好的可读性。
+值得一提的是——这个扩展库不需要 **任何** 依赖。
 
 ## Welcome
 
-Welcome to the wiki. It aims to explain every aspect of **LuaMidi ♫**, from [installation](https://github.com/PedroAlvesV/LuaMidi/wiki/Getting-Started#installation) to [writing a MIDI file](https://github.com/PedroAlvesV/LuaMidi/wiki/Writing-Stairway-to-Heaven) with everything it offers. If there's something you didn't find here, please, post an [issue](https://github.com/PedroAlvesV/LuaMidi/issues) and it'll be answered as quickly as possible.
+ 欢迎来到wiki页面，这个wiki旨在说明通过 **Midido ♫** 提供的一切方法写出MIDI文件的方法和过程。如果你在这里没有找到如何对自己有帮助的内容，请发布issue，我会尽快回复哦。
 
-**Warning:** This wiki is still under construction. Many pages may be missing.
+!!! Warning
+	这个wiki仍然在建设中，许多页面可能会缺失，请耐心等待页面的创建和完善。在此期间你可以订阅本站的RSS，及时获取最新的更新内容。
 
 ## Pages
 
-* [[Getting Started]]
-  * [Installation](https://github.com/PedroAlvesV/LuaMidi/wiki/Getting-Started#installation)
-  * [Usage](https://github.com/PedroAlvesV/LuaMidi/wiki/Getting-Started#usage)
-* [[Classes]]
-  * [NoteEvent](https://github.com/PedroAlvesV/LuaMidi/wiki/Classes#noteevent)
-  * [ProgramChangeEvent](https://github.com/PedroAlvesV/LuaMidi/wiki/Classes#programchangeevent)
-  * [Track](https://github.com/PedroAlvesV/LuaMidi/wiki/Classes#track)
-  * [Writer](https://github.com/PedroAlvesV/LuaMidi/wiki/Classes#writer)
-  * [LuaMidi](https://github.com/PedroAlvesV/LuaMidi/wiki/Classes#luamidi)
-* [[Writing Stairway to Heaven]]
-* [API Reference](https://pedroalvesv.github.io/LuaMidi/)
-* [[Examples]]
- 
+ - Usage
+
+## Usage
+
+1. 导入主模块:
+
+```lua
+local Midido = require ('Midido')
+```
+
+2. 完成上步后，所有的类均可使用，以下是如何编写C大调音阶的示例:
+
+```lua
+local Midido = require ('Midido')
+local Track = Midido.Track
+local NoteEvent = Midido.NoteEvent
+local Writer = Midido.Writer
+
+-- 创建 Track 实例
+local track = Track.new()
+
+-- 将音符存为notes表中的键值(必须指定的八度音阶)
+local notes = {'C3', 'D3', 'E3', 'F3', 'G3', 'A3', 'B3', 'C4'}
+
+-- 将音符添加到轨道
+track:add_events(NoteEvent.new({pitch = notes, sequential = true}))
+
+-- 遍历轨道
+local writer = Writer.new(track)
+
+-- 写一个名为《C Major Scale》的MIDI文件
+writer:save_MIDI('C Major Scale')
+```
+
+由于代码中已经有一些注释，因此不需要对其再进行解释说明。 这是 MIDI 文件构建的基本步骤。 有一个更复杂的例子可以在 Writing Stairway to Heaven 中看到。
+有关它的进一步说明，请查看 类 页面。

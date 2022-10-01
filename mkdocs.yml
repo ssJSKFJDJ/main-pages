@@ -159,7 +159,8 @@ nav:
     - Genshin_Impact_tts.lua: Scripts/Genshin_Impact_tts.md
   - Module: 
     - Print.lua: Module/Print.md
-    - listen2me wiki: Module/listen2me-wiki.md
+  - Wiki:
+    - listen2me: Module/listen2me-wiki.md
   - About:
     - License: about/license.md
     - Release Notes: about/release-notes.md
