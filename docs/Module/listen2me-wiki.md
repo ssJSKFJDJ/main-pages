@@ -400,4 +400,4 @@ trk:add_events(ProgramChangeEvent.new(25)):set_instrument_name("Nylon Guitar")
 
 ## API
 
-> 你可以在[这里](/Midido-API/)看到API的更详细信息。
+> 你可以在[这里](/ssJSKFJDJ/Midido-API/)看到API的更详细信息。
