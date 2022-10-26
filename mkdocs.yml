@@ -1,15 +1,15 @@
 # Project information
 site_name: ssJSKFJDJ
-site_url: https://cypress0522.github.io/ssJSKFJDJ/
-site_author: 简律纯
+site_url: https://ssjskfjdj.github.io/main-pages/
+site_author: MIZUKORA
 site_description: >-
   baka!
 # Repository
-repo_url: https://github.com/cypress0522/ssJSKFJDJ/
-repo_name: cypress0522/ssJSKFJDJ
+repo_url: https://github.com/ssJSKFJDJ/main-pages
+repo_name: ssJSKFJDJ/main-pages
 
 # Copyright
-copyright: Copyright &copy; 2018 - 2022 cypress0522:Licensed under CC BY-NC-SA 4.0.
+copyright: Copyright &copy; 2018 - 2022 ssJSKFJDJ:Licensed under CC BY-NC-SA 4.0.
 
 # Configuration
 theme:
@@ -24,7 +24,7 @@ theme:
   include_search_page: false
   search_index_only: true
 
-  favicon: assets/images/avatar.png
+  favicon: assets/images/ico.png
 
   # Default values, taken from mkdocs_theme.yml
   language: zh
@@ -70,15 +70,16 @@ theme:
 
 # Plugins
 plugins:
-    - hello-dolly
-    - search
-    - mdoctag
-    - git-revision-date
-    - git-authors
-    - rss
-    - print-site
-    - tooltips
-    - categories
+  - hello-dolly
+  - search
+  - mdoctag
+  - git-revision-date
+  - git-authors
+  - rss
+  - print-site
+  - tooltips
+  - categories
+  - git-committers
 # Customization
 extra:
   analytics:
