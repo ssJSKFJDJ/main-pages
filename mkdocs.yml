@@ -1,6 +1,6 @@
 # Project information
 site_name: ssJSKFJDJ
-site_url: https://ssjskfjdj.github.io/main-pages/
+site_url: https://ssjskfjdj.netlify.app/
 site_author: MIZUKORA
 site_description: >-
   baka!
@@ -9,8 +9,7 @@ repo_url: https://github.com/ssJSKFJDJ/main-pages
 repo_name: ssJSKFJDJ/main-pages
 
 # Copyright
-copyright: Copyright &copy; 2018 - 2022 ssJSKFJDJ:Licensed under CC BY-NC-SA 4.0.
-
+copyright: Copyright &copy; 2018 - 2022 ssJSKFJDJ
 # Configuration
 theme:
   name: null
@@ -66,7 +65,7 @@ theme:
     code: Roboto Mono
 
   icon: 
-    logo: material/Owl
+    logo: material/book
 
 # Plugins
 plugins:
@@ -104,7 +103,7 @@ extra:
     - icon: fontawesome/solid/paper-plane
       link: mailto:hsiangnianian@outlook.com
     - icon: fontawesome/brands/github
-      link: https://www.github.com/cypress0522
+      link: https://www.github.com/ssJSKFJDJ
 
 # Extensions
 markdown_extensions:
@@ -161,7 +160,7 @@ nav:
   - Module: 
     - Print.lua: Module/Print.md
   - Wiki:
-    - listen2me: Module/listen2me-wiki.md
+    - listen2me: wiki/listen2me.md
   - About:
     - License: about/license.md
     - Release Notes: about/release-notes.md
@@ -173,7 +172,7 @@ nav:
       - Guide for Scripts: 'Files-Scripts-Guide.md'
     - Module:
       - Guide for Module: 'Files-Module-Guide.md'
-    - Print Page: './print_page/'
+    - Print Page: 'print_page/'
   - Updates:
     - Last Created: 'last-created.md'
     - Last Updated: 'last-updated.md'

@@ -10,12 +10,12 @@ template: overrides/main.html
 
 	> 2022-10-03
 	
-	1.[listen2me-wiki](/ssJSKFJDJ/Module/listen2me-wiki/)
+	1.[listen2me-wiki](../wiki/listen2me/)
 	
 	
 	> 2022-8-28
 	
-	1.[Genshin_Impact_tts.lua](/ssJSKFJDJ/Scripts/Genshin_Impact_tts/)
+	1.[Genshin_Impact_tts.lua](../Scripts/Genshin_Impact_tts/)
 	
 	
 	
@@ -25,7 +25,7 @@ template: overrides/main.html
 
 	> 2022-9-08
 		
-	1.[Genshin_Impact_tts](/ssJSKFJDJ/Scripts/Genshin_Impact_tts/)
+	1.[Genshin_Impact_tts](Scripts/Genshin_Impact_tts/)
 		
 	- 新增
 		1.`.GItts update`命令，用于自动更新设置。
@@ -41,7 +41,7 @@ welcome to [ssJSKFJDJ]{💕很好，又骗进来一个}。
 
 这里是本人存放脚本支持并且更新源码的地方，
 如果[认为这对你或许很有帮助]{这样的感觉对我其实非常重要}，
-那么你可以[订阅](/ssJSKFJDJ/Rss/)本站的RSS，
+那么你可以[订阅](Rss/)本站的RSS，
 或是——访问[github](https://github.com/cypress0522/)，
 [关注我]{球球了}，[starred此库](https://github.com/cypress0522/ssJSKFJDJ/)。
 
