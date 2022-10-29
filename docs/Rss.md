@@ -27,13 +27,13 @@ template: overrides/main.html
 === ":octicons-rss-16: lastest-created"
 
     ``` yaml
-	https://cypress0522.github.io/ssJSKFJDJ/feed_rss_created.xml
+	https://ssjskfjdj.netlify.app/feed_rss_created.xml
     ```
 
 === ":octicons-rss-16: lastest-updated"
 
     ``` yaml
-	https://cypress0522.github.io/ssJSKFJDJ/feed_rss_updated.xml
+	https://ssjskfjdj.netlify.app/feed_rss_updated.xml
     ```
 
 
