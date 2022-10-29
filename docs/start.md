@@ -1,10 +1,15 @@
 ---
 template: overrides/main.html
+author: Hsiang
 ---
 
 {{dolly}}
 
 # Hallo!
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/9452c174-42c2-44b3-b3e5-90e79fda77c4/deploy-status)](https://ssjskfjdj.netlify.app/)[![GitHub contributors](https://img.shields.io/github/contributors/ssJSKFJDJ/main-pages.svg)](https://github.com/ssJSKFJDJ/main-pages/graphs/contributors)
+[![GitHub last commit](https://img.shields.io/github/last-commit/ssJSKFJDJ/main-pages.svg)](https://github.com/ssJSKFJDJ/mainn-pages/commits)
+[![release](https://img.shields.io/github/v/release/ssJSKFJDJ/main-pages.svg)](https://github.com/ssJSKFJDJ/main-pages/release)
 
 ???+ done inline ":octicons-file-added-16: 最近创建"
 
@@ -41,7 +46,7 @@ welcome to [ssJSKFJDJ]{💕很好，又骗进来一个}。
 
 这里是本人存放脚本支持并且更新源码的地方，
 如果[认为这对你或许很有帮助]{这样的感觉对我其实非常重要}，
-那么你可以[订阅](Rss/)本站的RSS，
+那么你可以[订阅](../Rss/)本站的RSS，
 或是——访问[github](https://github.com/cypress0522/)，
 [关注我]{球球了}，[starred此库](https://github.com/cypress0522/ssJSKFJDJ/)。
 
