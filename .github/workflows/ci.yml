@@ -4,7 +4,7 @@ on:
     branches:
       - master 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -24,4 +24,5 @@ jobs:
       - run: pip install mkdocs-print-site-plugin
       - run: pip install mkdocs-tooltips
       - run: pip install mkdocs-categories-plugin
-      - run: mkdocs gh-deploy --force
+      - run: git push -f git@github.com:Haixiang6123/first-page.git master
+      # mkdocs gh-deploy --force
