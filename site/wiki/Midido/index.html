@@ -1336,6 +1336,178 @@
     </fieldset>
   </form>
 
+<!-- Overwrites content.html base mkdocs theme, taken from 
+https://github.com/mkdocs/mkdocs/blob/master/mkdocs/themes/mkdocs/content.html -->
+
+
+
+<h1 id="midido-wiki">Midido - wiki ♫<a class="headerlink" href="#midido-wiki" title="Permanent link">&para;</a></h1>
+<blockquote>
+<h2 id="midido">Midido ♫<a class="headerlink" href="#midido" title="Permanent link">&para;</a></h2>
+</blockquote>
+<p>一个用于读写MIDI文件，且具有十分友好的API的Lua扩库。它提供的MIDI数据是完全抽象的，因此并不需要用户担心那些诸如增量时间(Delta Time)和音符信号(NoteOn/NoteOff)这样的技术问题。它的方法是直观且具体的，同时对象数据也具有良好的可读性。
+值得一提的是——这个扩展库不需要 <strong>任何</strong> 依赖。</p>
+<h2 id="welcome">Welcome<a class="headerlink" href="#welcome" title="Permanent link">&para;</a></h2>
+<p>欢迎来到wiki页面，这个wiki旨在说明通过 <strong>Midido ♫</strong> 提供的一切方法写出MIDI文件的方法和过程。如果你在这里没有找到如何对自己有帮助的内容，请发布issue，我会尽快回复哦。</p>
+<h2 id="guide">Guide<a class="headerlink" href="#guide" title="Permanent link">&para;</a></h2>
+<h3 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h3>
+<ol>
+<li>导入主模块:</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">local</span> <span class="n">Midido</span> <span class="o">=</span> <span class="nb">require</span> <span class="p">(</span><span class="s1">&#39;Midido&#39;</span><span class="p">)</span>
+</code></pre></div>
+<ol>
+<li>完成上步后，所有的类均可使用，以下是如何编写C大调音阶的示例:</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">local</span> <span class="n">Midido</span> <span class="o">=</span> <span class="nb">require</span> <span class="p">(</span><span class="s1">&#39;Midido&#39;</span><span class="p">)</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kd">local</span> <span class="n">Track</span> <span class="o">=</span> <span class="n">Midido</span><span class="p">.</span><span class="n">Track</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="kd">local</span> <span class="n">NoteEvent</span> <span class="o">=</span> <span class="n">Midido</span><span class="p">.</span><span class="n">NoteEvent</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="kd">local</span> <span class="n">Writer</span> <span class="o">=</span> <span class="n">Midido</span><span class="p">.</span><span class="n">Writer</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="c1">-- 创建 Track 实例</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="kd">local</span> <span class="n">track</span> <span class="o">=</span> <span class="n">Track</span><span class="p">.</span><span class="n">new</span><span class="p">()</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="c1">-- 将音符存为notes表中的键值(必须指定的八度音阶)</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="kd">local</span> <span class="n">notes</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;C3&#39;</span><span class="p">,</span> <span class="s1">&#39;D3&#39;</span><span class="p">,</span> <span class="s1">&#39;E3&#39;</span><span class="p">,</span> <span class="s1">&#39;F3&#39;</span><span class="p">,</span> <span class="s1">&#39;G3&#39;</span><span class="p">,</span> <span class="s1">&#39;A3&#39;</span><span class="p">,</span> <span class="s1">&#39;B3&#39;</span><span class="p">,</span> <span class="s1">&#39;C4&#39;</span><span class="p">}</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="c1">-- 将音符添加到轨道</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="n">track</span><span class="p">:</span><span class="n">add_events</span><span class="p">(</span><span class="n">NoteEvent</span><span class="p">.</span><span class="n">new</span><span class="p">({</span><span class="n">pitch</span> <span class="o">=</span> <span class="n">notes</span><span class="p">,</span> <span class="n">sequential</span> <span class="o">=</span> <span class="kc">true</span><span class="p">}))</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="c1">-- 遍历轨道</span>
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="kd">local</span> <span class="n">writer</span> <span class="o">=</span> <span class="n">Writer</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="n">track</span><span class="p">)</span>
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="c1">-- 写一个名为《C Major Scale》的MIDI文件</span>
+<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="n">writer</span><span class="p">:</span><span class="n">save_MIDI</span><span class="p">(</span><span class="s1">&#39;C Major Scale&#39;</span><span class="p">)</span>
+</code></pre></div>
+<p>由于代码中已经有一些注释，因此不需要对其再进行解释说明。 这是 MIDI 文件构建的基本步骤。</p>
+<h2 id="categories">Categories<a class="headerlink" href="#categories" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="../../categories/lua/">Lua</a></li>
+</ul>
+
+
+  <p><small>Authors: <span class='git-page-authors git-authors'><a href='mailto:2753364619@qq.com'>cypress0522</a></span></small></p>
+
+  
+                
+  <a href="https://github.com/ssJSKFJDJ/main-pages/edit/master/docs/wiki/Midido.md" title="编辑此页" class="md-content__button md-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+
+<h1 id="midido-wiki">Midido - wiki ♫<a class="headerlink" href="#midido-wiki" title="Permanent link">&para;</a></h1>
+<blockquote>
+<h2 id="midido">Midido ♫<a class="headerlink" href="#midido" title="Permanent link">&para;</a></h2>
+</blockquote>
+<p>一个用于读写MIDI文件，且具有十分友好的API的Lua扩库。它提供的MIDI数据是完全抽象的，因此并不需要用户担心那些诸如增量时间(Delta Time)和音符信号(NoteOn/NoteOff)这样的技术问题。它的方法是直观且具体的，同时对象数据也具有良好的可读性。
+值得一提的是——这个扩展库不需要 <strong>任何</strong> 依赖。</p>
+<h2 id="welcome">Welcome<a class="headerlink" href="#welcome" title="Permanent link">&para;</a></h2>
+<p>欢迎来到wiki页面，这个wiki旨在说明通过 <strong>Midido ♫</strong> 提供的一切方法写出MIDI文件的方法和过程。如果你在这里没有找到如何对自己有帮助的内容，请发布issue，我会尽快回复哦。</p>
+<h2 id="guide">Guide<a class="headerlink" href="#guide" title="Permanent link">&para;</a></h2>
+<h3 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h3>
+<ol>
+<li>导入主模块:</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">local</span> <span class="n">Midido</span> <span class="o">=</span> <span class="nb">require</span> <span class="p">(</span><span class="s1">&#39;Midido&#39;</span><span class="p">)</span>
+</code></pre></div>
+<ol>
+<li>完成上步后，所有的类均可使用，以下是如何编写C大调音阶的示例:</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">local</span> <span class="n">Midido</span> <span class="o">=</span> <span class="nb">require</span> <span class="p">(</span><span class="s1">&#39;Midido&#39;</span><span class="p">)</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kd">local</span> <span class="n">Track</span> <span class="o">=</span> <span class="n">Midido</span><span class="p">.</span><span class="n">Track</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="kd">local</span> <span class="n">NoteEvent</span> <span class="o">=</span> <span class="n">Midido</span><span class="p">.</span><span class="n">NoteEvent</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="kd">local</span> <span class="n">Writer</span> <span class="o">=</span> <span class="n">Midido</span><span class="p">.</span><span class="n">Writer</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="c1">-- 创建 Track 实例</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="kd">local</span> <span class="n">track</span> <span class="o">=</span> <span class="n">Track</span><span class="p">.</span><span class="n">new</span><span class="p">()</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="c1">-- 将音符存为notes表中的键值(必须指定的八度音阶)</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="kd">local</span> <span class="n">notes</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;C3&#39;</span><span class="p">,</span> <span class="s1">&#39;D3&#39;</span><span class="p">,</span> <span class="s1">&#39;E3&#39;</span><span class="p">,</span> <span class="s1">&#39;F3&#39;</span><span class="p">,</span> <span class="s1">&#39;G3&#39;</span><span class="p">,</span> <span class="s1">&#39;A3&#39;</span><span class="p">,</span> <span class="s1">&#39;B3&#39;</span><span class="p">,</span> <span class="s1">&#39;C4&#39;</span><span class="p">}</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="c1">-- 将音符添加到轨道</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="n">track</span><span class="p">:</span><span class="n">add_events</span><span class="p">(</span><span class="n">NoteEvent</span><span class="p">.</span><span class="n">new</span><span class="p">({</span><span class="n">pitch</span> <span class="o">=</span> <span class="n">notes</span><span class="p">,</span> <span class="n">sequential</span> <span class="o">=</span> <span class="kc">true</span><span class="p">}))</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="c1">-- 遍历轨道</span>
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="kd">local</span> <span class="n">writer</span> <span class="o">=</span> <span class="n">Writer</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="n">track</span><span class="p">)</span>
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="c1">-- 写一个名为《C Major Scale》的MIDI文件</span>
+<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="n">writer</span><span class="p">:</span><span class="n">save_MIDI</span><span class="p">(</span><span class="s1">&#39;C Major Scale&#39;</span><span class="p">)</span>
+</code></pre></div>
+<p>由于代码中已经有一些注释，因此不需要对其再进行解释说明。 这是 MIDI 文件构建的基本步骤。</p>
+<h2 id="categories">Categories<a class="headerlink" href="#categories" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="../../categories/lua/">Lua</a></li>
+</ul>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      最后更新:
+      2022-10-30
+    
+  </small>
+</div>
+
+
+  
+
+
+
+  <form class="md-feedback" name="feedback" hidden>
+    <fieldset>
+      <legend class="md-feedback__title">
+        这篇文章有用吗？
+      </legend>
+      <div class="md-feedback__inner">
+        <div class="md-feedback__list">
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="太nm有用了，我要三连！" data-md-value="1">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 9v12H1V9h4m4 12a2 2 0 0 1-2-2V9c0-.55.22-1.05.59-1.41L14.17 1l1.06 1.06c.27.27.44.64.44 1.05l-.03.32L14.69 8H21a2 2 0 0 1 2 2v2c0 .26-.05.5-.14.73l-3.02 7.05C19.54 20.5 18.83 21 18 21H9m0-2h9.03L21 12v-2h-8.79l1.13-5.32L9 9.03V19Z"/></svg>
+            </button>
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="写的什么？" data-md-value="0">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 15V3h4v12h-4M15 3a2 2 0 0 1 2 2v10c0 .55-.22 1.05-.59 1.41L9.83 23l-1.06-1.06c-.27-.27-.44-.64-.44-1.06l.03-.31.95-4.57H3a2 2 0 0 1-2-2v-2c0-.26.05-.5.14-.73l3.02-7.05C4.46 3.5 5.17 3 6 3h9m0 2H5.97L3 12v2h8.78l-1.13 5.32L15 14.97V5Z"/></svg>
+            </button>
+          
+        </div>
+        <div class="md-feedback__note">
+          
+            <div data-md-value="1" hidden>
+              
+              
+                
+              
+              
+                你真可爱！
+              
+            </div>
+          
+            <div data-md-value="0" hidden>
+              
+              
+                
+              
+              
+                你tmd也太可爱了吧。 点击<a href="https://cypress0522.github.io/about" target="_blank" rel="noopener">链接</a>来提交你的建议吧...
+              
+            </div>
+          
+        </div>
+      </div>
+    </fieldset>
+  </form>
+
+              
+
+  
+    <div class="md-source-date">
+      <small>
+          Authors: <span class='git-page-authors git-authors'><a href='mailto:2753364619@qq.com'>cypress0522</a></span>
+      </small>
+    </div>
+  
 
             </article>
             

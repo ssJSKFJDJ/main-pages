@@ -1,3 +1,7 @@
+---
+template: overrides/main.html
+contributors: cypress0522
+---
 <!-- mml2mid コマンド玲斧山 -->
 # mml 命令一览表
 
