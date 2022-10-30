@@ -17,4 +17,10 @@ jobs:
       - run: pip install mkdocs-material
       - run: pip install mkdocs-blogging-plugin
       - run: pip install git+https://github.com/fmaida/hello-dolly-mkdocs-plugin
+      - run: pip install git+https://github.com/srymh/MkdocsTagPlugin
+      - run: pip install mkdocs-git-revision-date-plugin
+      - run: pip install mkdocs-git-authors-plugin
+      - run: pip install mkdocs-rss-plugin
+      - run: pip install mkdocs-print-site-plugin
+      - run: pip install mkdocs-tooltips
       - run: mkdocs gh-deploy --force
