@@ -5,6 +5,8 @@ contributors: cypress0522
 
 {{dolly}}
 
+{{git_page_authors}}
+
 # Hallo!
 
 ???+ done inline ":octicons-file-added-16: 最近创建"

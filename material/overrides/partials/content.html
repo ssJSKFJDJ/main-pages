@@ -1,6 +1,7 @@
 {#-
   This file was automatically generated - do not edit
 -#}
+
 {% if page.edit_url %}
   {% set edit = "https://github.com/squidfunk/mkdocs-material/edit" %}
   {% set view = "https://raw.githubusercontent.com/squidfunk/mkdocs-material" %}
@@ -11,33 +12,22 @@
     {% include ".icons/material/file-eye-outline.svg" %}
   </a>
 {% endif %}
+
 {% if "tags" in config.plugins %}
   {% include "partials/tags.html" %}
 {% endif %}
+
 {% if not "\x3ch1" in page.content %}
   <h1>{{ page.title | d(config.site_name, true)}}</h1>
 {% endif %}
+
 {{ page.content }}
+
 {% if page.meta and (
   page.meta.git_revision_date_localized or
   page.meta.revision_date
 ) %}
   {% include "partials/source-file.html" %}
 {% endif %}
+
 {% include "partials/feedback.html" %}
-<!-- Overwrites content.html base mkdocs theme, taken from 
-https://github.com/mkdocs/mkdocs/blob/master/mkdocs/themes/mkdocs/content.html -->
-
-{% if page.meta.source %}
-    <div class="source-links">
-    {% for filename in page.meta.source %}
-        <span class="label label-primary">{{ filename }}</span>
-    {% endfor %}
-    </div>
-{% endif %}
-
-{{ page.content }}
-
-{% if git_page_authors %}
-  <p><small>作者: {{ git_page_authors | default('enable mkdocs-git-authors-plugin') }}</small></p>
-{% endif %}

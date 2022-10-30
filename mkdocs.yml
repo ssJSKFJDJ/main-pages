@@ -73,19 +73,17 @@ plugins:
   - search
   - mdoctag
   - git-revision-date
-  - git-authors
-  - rss
-  - print-site
-  - tooltips
-  - categories
   - git-authors:
       show_contribution: true
       show_line_count: true
       count_empty_lines: true
-      fallback_to_empty: false
-      exclude:
-          - index.md
-      enabled: true
+  - rss
+  - print-site
+  - tooltips
+  - categories
+  # - git-committers:
+  #     repository: ssJSKFJDJ/main-pages
+  #     branch: master
 
 # Customization
 extra:
@@ -156,6 +154,7 @@ markdown_extensions:
 
 extra_css:
   - css/hint.min.css
+  - css/contributors.css
 # Page tree
 nav:
   - Home: index.md
