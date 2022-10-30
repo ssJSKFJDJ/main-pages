@@ -164,6 +164,7 @@ nav:
   - Categories: './categories'
   - Scrpts:
     - Genshin_Impact_tts.lua: Scripts/Genshin_Impact_tts.md
+    - team call: Scripts/team call.md
   - Module: 
     - Print.lua: Module/Print.md
   - Wiki:
