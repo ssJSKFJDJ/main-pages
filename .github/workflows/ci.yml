@@ -23,4 +23,5 @@ jobs:
       - run: pip install mkdocs-rss-plugin
       - run: pip install mkdocs-print-site-plugin
       - run: pip install mkdocs-tooltips
+      - run: pip install mkdocs-categories-plugin
       - run: mkdocs gh-deploy --force
