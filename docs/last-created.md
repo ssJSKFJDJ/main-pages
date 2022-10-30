@@ -8,8 +8,8 @@ template: overrides/main.html
 
 ??? missing
 	
-	1.[listen2me-wiki](../wiki/listen2me)
-	功能模块listen2me的wiki使用教程.
+	1.[wiki:Midido](../wiki/Midido)
+	扩展库Midido的wiki使用教程.
 	
 > 2022-8-28
 
