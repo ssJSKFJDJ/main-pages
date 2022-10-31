@@ -120,7 +120,7 @@ template: overrides/main.html
       3. 进入新的界面后，第一种方法是将.json文件拖入中间的框中，第二种方法是选择中间的蓝色choose you files按钮 ，并在弹出的资源管理器窗口中选择您要上传的文件
       4. 上传完成后，点击底部的绿色Commit changes按钮
       5. 此时您自己的库已经更新，之后需要在界面中寻找Pull request按钮并点击
-      6. 在Pull Requests分支下，点击右边的绿色New pull request按钮或是中下蓝色的create a pull requret按钮
+      6. 在Pull Requests中，点击右边的绿色New pull request按钮或是中下蓝色的create a pull requret按钮
       7. 在新界面中选择绿色的Create pull request按钮 ，请求将代码提交到ssJSKFJDJ的库中
            
 ### Module(功能模块)
