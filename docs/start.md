@@ -105,6 +105,29 @@ template: overrides/main.html
 
 > 如果你是牌堆作者，那么你可以[fork PublicDeck](https://github.com/ssJSKFJDJ/PublicDeck)仓库，然后按格式提交PR。
 
+!!! warning
+    ### 注意事项
+    xxx
+
+=== ":octicons-file-16: 提交单个`*.json`文件"
+
+      1. 若您提交的是单个`*.json`文件，请在牌堆内务必写上如下信息，否则审核将会...
+      ```json
+      {
+        "":[
+        
+        ]
+      }
+      ```
+
+=== ":octicons-file-directory-fill-16: 提交多个`*.json`文件甚至文件夹"
+
+      !!! warning
+          请遵循以下步骤
+
+      1. ...
+      2. ...
+
 ### Module(功能模块)
 
 功能模块。是“主营业务”。
