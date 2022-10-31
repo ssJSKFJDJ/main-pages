@@ -56,7 +56,7 @@ template: overrides/main.html
       -- @license 协议名(比如MIT.)
       -------------------------------
       ```
-      1. 随后请将你的lua脚本提交至[Single File](https://github.com/ssJSKFJDJ/plugin/tree/main/Single%20File)文件夹，并在该文件夹下的[README.md](https://github.com/ssJSKFJDJ/plugin/blob/main/Single%20File/README.md)内找到当天日期（如没有就添加一个）写上:
+      2. 随后请将你的lua脚本提交至[Single File](https://github.com/ssJSKFJDJ/plugin/tree/main/Single%20File)文件夹，并在该文件夹下的[README.md](https://github.com/ssJSKFJDJ/plugin/blob/main/Single%20File/README.md)内找到当天日期（如没有就添加一个）写上:
       ```yaml
       日期:
          - 脚本文件（包含.lua扩展名） by 作者名（联系方式)
