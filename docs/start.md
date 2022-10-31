@@ -122,7 +122,8 @@ template: overrides/main.html
       5. 此时您自己的库已经更新，之后需要在界面中寻找Pull request按钮并点击
       6. 在Pull Requests中，点击右边的绿色New pull request按钮或是中下蓝色的create a pull requret按钮
       7. 在新界面中选择绿色的Create pull request按钮 ，请求将代码提交到ssJSKFJDJ的库中
-           
+      <p><small>本段作者:梦夜雨</small></p>
+      
 ### Module(功能模块)
 
 功能模块。是“主营业务”。
