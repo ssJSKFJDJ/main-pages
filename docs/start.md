@@ -117,8 +117,8 @@ Contribute: Hsiang
    你可以直接[访问](https://github.com/ssJSKFJDJ/main-pages/blob/master/docs/Module/listen2me)来查看该json所在位置。
    这里我们只需要填写"pkg"字段即可，"repo"字段如有请删除。
    
-   !!! note
-       pkg填写的是把功能模块打包好后发布的地址，必须为直链，不一定要在github上!
+!!! note
+    pkg填写的是把功能模块打包好后发布的地址，必须为直链，不一定要在github上!
 
 3. 给你的功能模块库添加`lua`和`dice-mod`标签。
 4. 按照格式提交PR。
