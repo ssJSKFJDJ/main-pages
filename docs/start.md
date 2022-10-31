@@ -16,7 +16,7 @@ template: overrides/main.html
 
 <img src="https://ghchart.rshah.org/cypress0522" />
 
-**Changelog:**
+**修改记录:**
 
 {{ git_show_history_log }}
 
