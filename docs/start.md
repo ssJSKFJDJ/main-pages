@@ -26,7 +26,7 @@ template: overrides/main.html
     1. [plugin](./#pluginlua)
     2. [PublicDeck](./#publicdeck)
     3. [mod](./#module)
-    4. [docs](./mkdocs)
+    4. [docs](./#mkdocs)
 
 !!! warning
     ### 再三强调
