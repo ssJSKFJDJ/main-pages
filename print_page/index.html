@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="baka!">
+        <meta name="description" content="Script & Module Recycle Bin >">
       
       
         <meta name="author" content="MIZUKORA">
@@ -550,6 +550,8 @@
         
           
         
+          
+        
       
       
         <label class="md-nav__link" for="__nav_4">
@@ -572,6 +574,20 @@
     <li class="md-nav__item">
       <a href="../Scripts/Genshin_Impact_tts/" class="md-nav__link">
         Genshin_Impact_tts.lua
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Scripts/team%20call/" class="md-nav__link">
+        team call
       </a>
     </li>
   
@@ -675,7 +691,7 @@
   
     <li class="md-nav__item">
       <a href="../wiki/Midido/" class="md-nav__link">
-        listen2me
+        Midido
       </a>
     </li>
   
@@ -1127,6 +1143,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#scripts-team%20call" class="md-nav__link">
+    5. team call
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1142,7 +1165,7 @@
         
           <li class="md-nav__item">
   <a href="#module-print" class="md-nav__link">
-    5. Print.lua
+    6. Print.lua
   </a>
   
 </li>
@@ -1162,7 +1185,7 @@
         
           <li class="md-nav__item">
   <a href="#wiki-midido" class="md-nav__link">
-    6. listen2me
+    7. Midido
   </a>
   
 </li>
@@ -1182,14 +1205,14 @@
         
           <li class="md-nav__item">
   <a href="#about-license" class="md-nav__link">
-    7. License
+    8. License
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#about-release-notes" class="md-nav__link">
-    8. Release Notes
+    9. Release Notes
   </a>
   
 </li>
@@ -1209,7 +1232,7 @@
         
           <li class="md-nav__item">
   <a href="#rss" class="md-nav__link">
-    9. Announcement
+    10. Announcement
   </a>
   
 </li>
@@ -1229,7 +1252,7 @@
         
           <li class="md-nav__item">
   <a href="#files-guide" class="md-nav__link">
-    10. Announcement
+    11. Announcement
   </a>
   
 </li>
@@ -1249,14 +1272,14 @@
         
           <li class="md-nav__item">
   <a href="#last-created" class="md-nav__link">
-    11. Last Created
+    12. Last Created
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#last-updated" class="md-nav__link">
-    12. Last Updated
+    13. Last Updated
   </a>
   
 </li>
@@ -1292,7 +1315,7 @@
                         <h1 class='nav-section-title' id='section-start'>
                             Start <a class='headerlink' href='#section-start' title='Permanent link'>↵</a>
                         </h1>
-                        <section class="print-page" id="start"><p>&laquo; Dolly'll never go away again &raquo;</p>
+                        <section class="print-page" id="start"><p>&laquo; Hello, Dolly &raquo;</p>
 <h1 id="start-ssjskfjdj">ssJSKFJDJ<a class="headerlink" href="#start-ssjskfjdj" title="Permanent link">&para;</a></h1>
 <p><a href="http://www.gnu.org/licenses"><img alt="License" src="https://img.shields.io/github/license/ssJSKFJDJ/.github.svg" /></a>
 <a href="https://ssjskfjdj.netlify.app/"><img alt="Netlify Status" src="https://api.netlify.com/api/v1/badges/9452c174-42c2-44b3-b3e5-90e79fda77c4/deploy-status" /></a>
@@ -1389,16 +1412,18 @@
 </code></pre></div>
    你可以直接<a href="https://github.com/ssJSKFJDJ/main-pages/blob/master/docs/Module/listen2me">访问</a>来查看该json所在位置。
    这里我们只需要填写"pkg"字段即可，"repo"字段如有请删除。</p>
-<blockquote>
-<p>tips:pkg填写的是把功能模块打包好后发布的地址，必须为直链，不一定要在github上!
-3. 给你的功能模块库添加<code>lua</code>和<code>dice-mod</code>标签。
-4. 按照格式提交PR。
-5. 如有需要一并提交md格式的技术文档。</p>
-</blockquote>
+<p>!!! note
+       pkg填写的是把功能模块打包好后发布的地址，必须为直链，不一定要在github上!</p>
+<ol>
+<li>给你的功能模块库添加<code>lua</code>和<code>dice-mod</code>标签。</li>
+<li>按照格式提交PR。</li>
+<li>如有需要一并提交md格式的技术文档。</li>
+</ol>
 <p>审核通过后你会在ssJSKFJDJ仓库下找到自己的功能模块库，每次更新功能模块时仅需提交新的pkg字段的json至<a href="https://github.com/ssJSKFJDJ/main-pages/tree/master/docs/Module">Module</a>文件夹下即可。最后，给bot安装时仅需要在<code>./DiceQQ/conf/mod/source.list</code>文件内添加一行写上<code>https://ssjskfjdj.netlify.app/Module/</code>，然后重载bot并发送命令<code>.mod get 你提交的功能模块名</code>即可完成下载。</p>
-<blockquote>
-<p>tips:论坛写帖子的时候也可以告诉大家这样安装就行了哦，可以使用如下模板：</p>
-</blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>论坛写帖子的时候也可以告诉大家这样安装就行了哦，可以使用如下模板：</p>
+</div>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#start-__codelineno-6-1"></a><span class="gh"># 1. install</span>
 <a id="__codelineno-6-2" name="__codelineno-6-2" href="#start-__codelineno-6-2"></a>
 <a id="__codelineno-6-3" name="__codelineno-6-3" href="#start-__codelineno-6-3"></a><span class="k">-</span> Dice版本2.6.5beta12(624+)以上安装方法:
@@ -1442,7 +1467,7 @@
 <a id="__codelineno-7-19" name="__codelineno-7-19" href="#start-__codelineno-7-19"></a>LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 <a id="__codelineno-7-20" name="__codelineno-7-20" href="#start-__codelineno-7-20"></a>OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 <a id="__codelineno-7-21" name="__codelineno-7-21" href="#start-__codelineno-7-21"></a>SOFTWARE.
-</code></pre></div></section><section class="print-page" id="guide"><p>&laquo; Hello, Dolly &raquo;</p>
+</code></pre></div></section><section class="print-page" id="guide"><p>&laquo; One of your old favourite songs from way back when &raquo;</p>
 <p><span class='git-page-authors git-authors'><a href='mailto:2753364619@qq.com'>cypress0522</a></span></p>
 <h1 id="guide-hallo">Hallo!<a class="headerlink" href="#guide-hallo" title="Permanent link">&para;</a></h1>
 <details class="done inline" open="open">
@@ -2069,6 +2094,19 @@ of this license document, but changing it is not allowed.
 <a id="__codelineno-8-54" name="__codelineno-8-54" href="#scripts-genshin_impact_tts-__codelineno-8-54"></a><span class="kr">end</span>
 </code></pre></div>
 <h2 id="scripts-genshin_impact_tts-categories">Categories<a class="headerlink" href="#scripts-genshin_impact_tts-categories" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="#categories-lua">Lua</a></li>
+</ul></section><section class="print-page" id="scripts-team%20call"><h1 id="scripts-team%20call-team-call">team call<a class="headerlink" href="#scripts-team%20call-team-call" title="Permanent link">&para;</a></h1>
+<div class="admonition done">
+<p class="admonition-title">Done</p>
+<p>仿SitaNya的team call功能，方便kp开团或公布信息时艾特调查员们。</p>
+</div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#scripts-team%20call-__codelineno-0-1"></a>plugin
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#scripts-team%20call-__codelineno-0-2"></a>    |——call.lua
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#scripts-team%20call-__codelineno-0-3"></a>    |——call
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#scripts-team%20call-__codelineno-0-4"></a>          |——list.json
+</code></pre></div>
+<h2 id="scripts-team%20call-categories">Categories<a class="headerlink" href="#scripts-team%20call-categories" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="#categories-lua">Lua</a></li>
 </ul></section><h1 class='nav-section-title-end'>Ended: Scrpts</h1>
@@ -2891,11 +2929,11 @@ of this license document, but changing it is not allowed.
                         <h2 class='nav-section-title' id='section-scripts'>
                             Scripts <a class='headerlink' href='#section-scripts' title='Permanent link'>↵</a>
                         </h2>
-                        <section class="print-page" id="files-scripts-guide"><p>&laquo; Hello, Dolly &raquo;</p></section><h1 class='nav-section-title-end'>Ended: Scripts</h1>
+                        <section class="print-page" id="files-scripts-guide"><p>&laquo; Well, hello, Dolly &raquo;</p></section><h1 class='nav-section-title-end'>Ended: Scripts</h1>
                         <h2 class='nav-section-title' id='section-module'>
                             Module <a class='headerlink' href='#section-module' title='Permanent link'>↵</a>
                         </h2>
-                        <section class="print-page" id="files-module-guide"><p>&laquo; Find her an empty lap, fellas &raquo;</p></section><h1 class='nav-section-title-end'>Ended: Module</h1><h1 class='nav-section-title-end'>Ended: Files</h1>
+                        <section class="print-page" id="files-module-guide"><p>&laquo; Well, hello, Dolly &raquo;</p></section><h1 class='nav-section-title-end'>Ended: Module</h1><h1 class='nav-section-title-end'>Ended: Files</h1>
                         <h1 class='nav-section-title' id='section-updates'>
                             Updates <a class='headerlink' href='#section-updates' title='Permanent link'>↵</a>
                         </h1>
