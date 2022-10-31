@@ -22,7 +22,7 @@ template: overrides/main.html
 
 ## Contribute
 
-!!! tips inline
+!!! list inline
     1. [plugin](./#pluginlua)
     2. [PublicDeck](./#publicdeck)
     3. [mod](./#module)
