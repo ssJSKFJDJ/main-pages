@@ -116,13 +116,18 @@ Contribute: Hsiang
    ```
    你可以直接[访问](https://github.com/ssJSKFJDJ/main-pages/blob/master/docs/Module/listen2me)来查看该json所在位置。
    这里我们只需要填写"pkg"字段即可，"repo"字段如有请删除。
-   > tips:pkg填写的是把功能模块打包好后发布的地址，必须为直链，不一定要在github上!
+   
+   !!! note
+       pkg填写的是把功能模块打包好后发布的地址，必须为直链，不一定要在github上!
+
 3. 给你的功能模块库添加`lua`和`dice-mod`标签。
 4. 按照格式提交PR。
 5. 如有需要一并提交md格式的技术文档。
 
 审核通过后你会在ssJSKFJDJ仓库下找到自己的功能模块库，每次更新功能模块时仅需提交新的pkg字段的json至[Module](https://github.com/ssJSKFJDJ/main-pages/tree/master/docs/Module)文件夹下即可。最后，给bot安装时仅需要在`./DiceQQ/conf/mod/source.list`文件内添加一行写上`https://ssjskfjdj.netlify.app/Module/`，然后重载bot并发送命令`.mod get 你提交的功能模块名`即可完成下载。
-> tips:论坛写帖子的时候也可以告诉大家这样安装就行了哦，可以使用如下模板：
+
+!!! note
+    论坛写帖子的时候也可以告诉大家这样安装就行了哦，可以使用如下模板：
 
 ```markdown
 # 1. install
