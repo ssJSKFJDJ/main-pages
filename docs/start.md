@@ -106,6 +106,7 @@ template: overrides/main.html
 ### PublicDeck(功能牌堆)
 
 <p><small>本段作者:梦夜雨</small></p>
+<p><small>校对:简律纯</small></p>
 
 > 如果你是牌堆作者，那么你可以[fork PublicDeck](https://github.com/ssJSKFJDJ/PublicDeck)仓库，然后按格式提交PR。
 
@@ -120,7 +121,7 @@ template: overrides/main.html
       }
       ```
       在牌堆中写明此内容后，下一步就是上传了（一个吐槽:基本就是一路绿下去 (什) )
-      2. 点击上方的连接后，在文件列表的右上会有一个名为code的绿色按钮，点击其左侧的Add file按钮 ，在下拉菜单中选择Up1oad files按钮
+      2. 点击上方的连接后，在文件列表的右上会有一个名为code的绿色按钮，点击其左侧的Add file按钮 ，在下拉菜单中选择Upload files按钮
       3. 进入新的界面后，第一种方法是将.json文件拖入中间的框中，第二种方法是选择中间的蓝色choose you files按钮 ，并在弹出的资源管理器窗口中选择您要上传的文件
       4. 上传完成后，点击底部的绿色Commit changes按钮
       5. 此时您自己的库已经更新，之后需要在界面中寻找Pull request按钮并点击
