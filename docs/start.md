@@ -140,27 +140,27 @@ template: overrides/main.html
 
 审核通过后你会在ssJSKFJDJ仓库下找到自己的功能模块库，每次更新功能模块时仅需提交新的pkg字段的json至[Module](https://github.com/ssJSKFJDJ/main-pages/tree/master/docs/Module)文件夹下即可。最后，给bot安装时仅需要在`./DiceQQ/conf/mod/source.list`文件内添加一行写上`https://ssjskfjdj.netlify.app/Module/`，然后重载bot并发送命令`.mod get 你提交的功能模块名`即可完成下载。
 
-!!! note
+???+ tip
     论坛写帖子的时候也可以告诉大家这样安装就行了哦，可以使用如下模板：
 
-```markdown
-# 1. install
+    ```markdown
+    # 1. install
 
-- Dice版本2.6.5beta12(624+)以上安装方法:
+    - Dice版本2.6.5beta12(624+)以上安装方法:
 
-  1. 在 `./DiceQQ/conf/mod/source.list`文件内（没有mod文件夹和这文件就新建）输入 `https://ssjskfjdj.netlify.app/Module/`。
-  2. 使用 `.system load`命令重载bot，这样做的目的是为了让步骤1里的远程地址生效。
-  3. 对bot发送 `.mod get [功能模块名]`命令，等待安装。
-  4. 回到第二步，这样做的目的是为了让mod被加载。
-  5. Enjoy Your Self!
+    1. 在 `./DiceQQ/conf/mod/source.list`文件内（没有mod文件夹和这文件就新建）输入 `https://ssjskfjdj.netlify.app/Module/`。
+    2. 使用 `.system load`命令重载bot，这样做的目的是为了让步骤1里的远程地址生效。
+    3. 对bot发送 `.mod get [功能模块名]`命令，等待安装。
+    4. 回到第二步，这样做的目的是为了让mod被加载。
+    5. Enjoy Your Self!
 
-- Dice版本2.6.4b(612+)以上安装方法：
+    - Dice版本2.6.4b(612+)以上安装方法：
 
-  1. 浏览器访问 `https://github.com/ssJSKFJDJ/功能模块名`并点击绿色按钮 `Code`下的 `Download Zip`按钮下载仓库压缩包。
-  2. 解压压缩包，将里面的文件和文件夹全部丢进 `./DiceQQ/mod/`文件夹内。
-  3. 使用 `.system load`命令重载。
-  4. Enjoy Your Self!
-```
+    1. 浏览器访问 `https://github.com/ssJSKFJDJ/功能模块名`并点击绿色按钮 `Code`下的 `Download Zip`按钮下载仓库压缩包。
+    2. 解压压缩包，将里面的文件和文件夹全部丢进 `./DiceQQ/mod/`文件夹内。
+    3. 使用 `.system load`命令重载。
+    4. Enjoy Your Self!
+    ```
 
 ### Mkdocs(技术文档)
 
