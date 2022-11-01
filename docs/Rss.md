@@ -41,6 +41,5 @@ template: overrides/main.html
 [一切都值得一试。]{难道不是吗?✨}
 
 <br>
-<br>
 
 {{ git_show_history_log }}
