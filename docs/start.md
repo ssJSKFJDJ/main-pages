@@ -125,7 +125,7 @@ template: overrides/main.html
       4. 上传完成后，点击底部的绿色Commit changes按钮
       5. 此时您自己的库已经更新，之后需要在界面中寻找Pull request按钮并点击
       6. 在Pull Requests中，点击右边的绿色New pull request按钮或是中下蓝色的create a pull requret按钮
-      7. 在新界面中选择绿色的Create pull request按钮 ，请求将代码提交到ssJSKFJDJ的库中
+      7. 在新界面中选择绿色的<p style="color:green">Create pull request</p>按钮 ，请求将代码提交到ssJSKFJDJ的库中
 
       
 ### Module(功能模块)
