@@ -37,11 +37,8 @@ template: overrides/main.html
     ```
 
 <br>
-<div class="center-aligned">
-    <div class="center-core">
+
         [一切都值得一试。]{难道不是吗?✨}
-    </div>
-</div>
 
 <br>
 <br>
