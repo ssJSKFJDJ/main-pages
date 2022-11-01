@@ -38,7 +38,7 @@ template: overrides/main.html
 
 <br>
 
-        [一切都值得一试。]{难道不是吗?✨}
+[一切都值得一试。]{难道不是吗?✨}
 
 <br>
 <br>
