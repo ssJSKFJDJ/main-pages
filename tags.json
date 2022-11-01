@@ -28,16 +28,16 @@
     "description": []
   },
   {
-    "title": "Guide",
-    "file_name": "Guide",
-    "url": "https://ssjskfjdj.netlify.app/Guide/",
+    "title": "Announcement",
+    "file_name": "Rss",
+    "url": "https://ssjskfjdj.netlify.app/Rss/",
     "tags": [],
     "description": []
   },
   {
-    "title": "Announcement",
-    "file_name": "Rss",
-    "url": "https://ssjskfjdj.netlify.app/Rss/",
+    "title": "What's New",
+    "file_name": "WhatsNew",
+    "url": "https://ssjskfjdj.netlify.app/WhatsNew/",
     "tags": [],
     "description": []
   },
