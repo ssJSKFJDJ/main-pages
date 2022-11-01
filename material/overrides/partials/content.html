@@ -19,6 +19,8 @@
 
 {% if not "\x3ch1" in page.content %}
   <h1>{{ page.title | d(config.site_name, true)}}</h1>
+  <br>
+  <p>{{ git_show_history_log }}</p>
 {% endif %}
 
 {{ page.content }}
@@ -29,5 +31,7 @@
 ) %}
   {% include "partials/source-file.html" %}
 {% endif %}
-
+{% if git_page_authors %}
+  <small>贡献者: {{ git_page_authors | default('enable mkdocs-git-authors-plugin') }}</small>
+{% endif %}
 {% include "partials/feedback.html" %}
