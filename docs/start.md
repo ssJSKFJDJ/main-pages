@@ -1,6 +1,5 @@
 ---
 template: overrides/main.html
-Contribute: Hsiang
 ---
 
 {{dolly}}
@@ -17,10 +16,27 @@ Contribute: Hsiang
 
 <img src="https://ghchart.rshah.org/cypress0522" />
 
-# Contribute
+**修改记录:**
 
+{{ git_show_history_log }}
 
-## plugin(Lua插件)
+## Contribute
+
+!!! list inline
+    1. [plugin](./#pluginlua)
+    2. [PublicDeck](./#publicdeck)
+    3. [mod](./#module)
+    4. [docs](./#mkdocs)
+
+!!! warning
+    ### 再三强调
+    为做出贡献务必 **按照格式和规范** 提交pr！
+    这样有利于提高效率。
+    ~~(也很省事)~~
+
+### plugin(Lua插件)
+
+<p><small>本段作者:简律纯</small></p>
 
 > 如果你是Dice!脚本作者，那么你可以[fork plugin](https://github.com/ssJSKFJDJ/plugin/fork)仓库，然后按格式提交PR。
 
@@ -33,67 +49,89 @@ Contribute: Hsiang
 [![单个lua文件](https://img.shields.io/github/directory-file-count/ssJSKFJDJ/plugin/Single%20File?extension=lua&label=Single%20Lua%20File&type=file)](https://github.com/ssJSKFJDJ/plugin/tree/main/Single%20File)
 [![多个lua文件](https://img.shields.io/github/directory-file-count/ssJSKFJDJ/plugin/Mutiple%20Files?label=Mutiple%20lua%20File&type=dir)](https://github.com/ssJSKFJDJ/plugin/tree/main/Single%20File)
 
-### WARNING
+=== ":octicons-file-16: 提交单个`*.lua`文件"
 
-注意，请**按照格式和规范**提交pr:
+      1. 若您提交的是单个`*.lua`文件，请在脚本前四行务必写上如下注释，否则审核将会被打回，这么做的理由是为了让您的脚本在被他人下载使用时，让他人知晓作者是谁，(若有报错)如何联系，能否二次演绎(协议)。
+      ```lua title="Single.lua"
+      -------------------------------
+      -- @脚本名 by 你的名字或联系方式
+      -- @license 协议名(比如MIT.)
+      -------------------------------
+      ```
+      2. 随后请将你的lua脚本提交至[Single File](https://github.com/ssJSKFJDJ/plugin/tree/main/Single%20File)文件夹，并在该文件夹下的[README.md](https://github.com/ssJSKFJDJ/plugin/blob/main/Single%20File/README.md)内找到当天日期（如没有就添加一个）写上:
+      ```yaml
+      日期:
+         - 脚本文件（包含.lua扩展名） by 作者名（联系方式)
+      #比如:
+      2022年10月30日:
+         - DailyNews.lua by 简律纯
+         - xxx.lua by xxx
+      ```
 
-1. 若您提交的是单个`*.lua`文件，请在脚本前四行务必写上如下注释，否则审核将会被打回：
-   ```lua
-   -------------------------------
-   -- @脚本名 by 你的名字或联系方式
-   -- @license 协议名(比如MIT.)
-   -------------------------------
-   ```
-   这么做的理由是为了让您的脚本在被他人下载使用时，让他人知晓作者是谁，(若有报错)如何联系，能否二次演绎(协议)。
-   
-   随后请将你的lua脚本提交至[Single File](https://github.com/ssJSKFJDJ/plugin/tree/main/Single%20File)文件夹，并在该文件夹下的[README.md](https://github.com/ssJSKFJDJ/plugin/blob/main/Single%20File/README.md)内找到当天日期（如没有就添加一个）写上:
-   ```md
-   日期:
-      - 脚本文件（包含.lua扩展名） by 作者名（联系方式)
-   #比如:
-   2022年10月30日:
-      - DailyNews.lua by 简律纯
-      - xxx.lua by xxx
-   ```
-2. 若您的脚本包含`*.lua`文件数量过多或是包含文件夹，请将它们全部放在一个以脚本名命名的文件夹内上传，并附上`README.md`简单介绍各个文件的作用以及一些作者信息。
-   它们将会是这样的:
-   ```
-   plugin_name
-        |-README.md
-        |-part1.lua
-        |-part2.lua
-        |————dir
-              |-file1
-              |-file2
-   ```
-   `README.md`文件内可以这样写：
-   ```markdown
-   脚本名：plugin_name
-   part1.lua:用于接受配置指令
-   part2.lua:脚本主体
-   dir:配置文件存放文件夹
-   file1:配置文件1
-   ...:...
-   作者:xxx
-   联系方式：xxx@xxx.xxxx
-   ```
-   随后请将你的文件夹提交至[Mutiple Files](https://github.com/ssJSKFJDJ/plugin/tree/main/Mutiple%20Files)文件夹,并在该文件夹下的[README.md](https://github.com/ssJSKFJDJ/plugin/blob/main/Mutiple%20Files/README.md)内找到当天日期（如没有就添加一个）写上:
-   ```md
-   日期:
-      - 你上传的文件夹名称 by 作者名（联系方式)
-   #比如:
-   2022年10月30日:
-      - team call by Pine
-      - xxx by xxx
-   ```
+=== ":octicons-file-directory-fill-16: 提交多个`*.lua`文件甚至文件夹"
 
-## PublicDeck(功能牌堆)
+      1. 若您的脚本包含`*.lua`文件数量过多或是包含文件夹，请将它们全部放在一个以脚本名命名的文件夹内上传，并附上`README.md`简单介绍各个文件的作用以及一些作者信息。
+      它们将会是这样的:
+      ```
+      plugin_name
+         |-README.md
+         |-part1.lua
+         |-part2.lua
+         |————dir
+               |-file1
+               |-file2
+      ```
+      `README.md`文件内可以这样写(只是为了表现层次，所以尽量使用文件树)：
+      ```markdown
+      plugin_name
+      |  |-part1.lua #用于接受配置指令
+      |  |-part2.lua #脚本主体
+      |
+      |-dir #配置文件存放文件夹
+         |-file1 #配置文件..
+      
+      作者:xxx
+      联系方式：xxx@xxx.xxxx
+      ```
+      2. 随后请将你的文件夹提交至[Mutiple Files](https://github.com/ssJSKFJDJ/plugin/tree/main/Mutiple%20Files)文件夹,并在该文件夹下的[README.md](https://github.com/ssJSKFJDJ/plugin/blob/main/Mutiple%20Files/README.md)内找到当天日期（如没有就添加一个）写上:
+      ```yaml
+      日期:
+         - 你上传的文件夹名称 by 作者名（联系方式)
+      #比如:
+      2022年10月30日:
+         - team call by Pine
+         - xxx by xxx
+      ```
+
+### PublicDeck(功能牌堆)
+
+<p><small>本段作者:梦夜雨<br>校对:简律纯</small></p>
 
 > 如果你是牌堆作者，那么你可以[fork PublicDeck](https://github.com/ssJSKFJDJ/PublicDeck)仓库，然后按格式提交PR。
 
-## Module(功能模块)
+=== ":octicons-file-16: 提交`*.json`文件"
 
-功能模块。是“主营业务”。
+      1. 请务必在牌堆内写上如下信息，否则审核将会打回您的文件，这么做的理由是为了让您的脚本在被他人下载使用时，让他人知晓作者是谁，(若有报错)如何联系等。
+      ```json
+      {
+        "_author":[
+            "名字+联系方式"
+        ]
+      }
+      ```
+      在牌堆中写明此内容后，下一步就是上传了（一个吐槽:基本就是一路绿下去 (什) )
+      2. 点击上方的连接后，在文件列表的右上会有一个名为code的绿色按钮，点击其左侧的Add file按钮 ，在下拉菜单中选择Upload files按钮
+      3. 进入新的界面后，第一种方法是将.json文件拖入中间的框中，第二种方法是选择中间的蓝色choose you files按钮 ，并在弹出的资源管理器窗口中选择您要上传的文件
+      4. 上传完成后，点击底部的绿色Commit changes按钮
+      5. 此时您自己的库已经更新，之后需要在界面中寻找Pull request按钮并点击
+      6. 在Pull Requests中，点击右边的绿色New pull request按钮或是中下蓝色的create a pull requret按钮
+      7. 在新界面中选择绿色的Create pull request按钮 ，请求将代码提交到ssJSKFJDJ的库中
+
+      
+### Module(功能模块)
+
+<p><small>本段作者:简律纯</small></p>
+
 功能模块的收集没有任何像plugin或PublickDeck那样的专门的库，这里只选择功能模块作者在main-pages的master分支的[Module](https://github.com/ssJSKFJDJ/main-pages/tree/master/docs/Module)文件夹下提交功能模块远程下载json的方式来收录Module。在收到PR以及审核通过后，审核人员会将你的功能模块库fork到ssJSKFJDJ。
 
 其一般步骤如下：
@@ -117,8 +155,8 @@ Contribute: Hsiang
    你可以直接[访问](https://github.com/ssJSKFJDJ/main-pages/blob/master/docs/Module/listen2me)来查看该json所在位置。
    这里我们只需要填写"pkg"字段即可，"repo"字段如有请删除。
    
-   !!! note
-       pkg填写的是把功能模块打包好后发布的地址，必须为直链，不一定要在github上!
+!!! note
+    pkg填写的是把功能模块打包好后发布的地址，必须为直链，不一定要在github上!
 
 3. 给你的功能模块库添加`lua`和`dice-mod`标签。
 4. 按照格式提交PR。
@@ -126,33 +164,33 @@ Contribute: Hsiang
 
 审核通过后你会在ssJSKFJDJ仓库下找到自己的功能模块库，每次更新功能模块时仅需提交新的pkg字段的json至[Module](https://github.com/ssJSKFJDJ/main-pages/tree/master/docs/Module)文件夹下即可。最后，给bot安装时仅需要在`./DiceQQ/conf/mod/source.list`文件内添加一行写上`https://ssjskfjdj.netlify.app/Module/`，然后重载bot并发送命令`.mod get 你提交的功能模块名`即可完成下载。
 
-!!! note
+???+ tip
     论坛写帖子的时候也可以告诉大家这样安装就行了哦，可以使用如下模板：
 
-```markdown
-# 1. install
+    ```markdown
+    # 1. install
 
-- Dice版本2.6.5beta12(624+)以上安装方法:
+    - Dice版本2.6.5beta12(624+)以上安装方法:
 
-  1. 在 `./DiceQQ/conf/mod/source.list`文件内（没有mod文件夹和这文件就新建）输入 `https://ssjskfjdj.netlify.app/Module/`。
-  2. 使用 `.system load`命令重载bot，这样做的目的是为了让步骤1里的远程地址生效。
-  3. 对bot发送 `.mod get [功能模块名]`命令，等待安装。
-  4. 回到第二步，这样做的目的是为了让mod被加载。
-  5. Enjoy Your Self!
+    1. 在 `./DiceQQ/conf/mod/source.list`文件内（没有mod文件夹和这文件就新建）输入 `https://ssjskfjdj.netlify.app/Module/`。
+    2. 使用 `.system load`命令重载bot，这样做的目的是为了让步骤1里的远程地址生效。
+    3. 对bot发送 `.mod get [功能模块名]`命令，等待安装。
+    4. 回到第二步，这样做的目的是为了让mod被加载。
+    5. Enjoy Your Self!
 
-- Dice版本2.6.4b(612+)以上安装方法：
+    - Dice版本2.6.4b(612+)以上安装方法：
 
-  1. 浏览器访问 `https://github.com/ssJSKFJDJ/功能模块名`并点击绿色按钮 `Code`下的 `Download Zip`按钮下载仓库压缩包。
-  2. 解压压缩包，将里面的文件和文件夹全部丢进 `./DiceQQ/mod/`文件夹内。
-  3. 使用 `.system load`命令重载。
-  4. Enjoy Your Self!
-```
+    1. 浏览器访问 `https://github.com/ssJSKFJDJ/功能模块名`并点击绿色按钮 `Code`下的 `Download Zip`按钮下载仓库压缩包。
+    2. 解压压缩包，将里面的文件和文件夹全部丢进 `./DiceQQ/mod/`文件夹内。
+    3. 使用 `.system load`命令重载。
+    4. Enjoy Your Self!
+    ```
 
-## Mkdocs(技术文档)
+### Mkdocs(技术文档)
 
 > to be...
 
-***
+## License
 
 ```
   MIT License
