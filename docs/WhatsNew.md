@@ -20,7 +20,7 @@ contributors: cypress0522
 
     > 2022-9-08
 
-    1.[Genshin_Impact_tts](Scripts/Genshin_Impact_tts/)
+    1.[Genshin_Impact_tts](../Scripts/Genshin_Impact_tts/)
 
     - 新增
 		1.`.GItts update`命令，用于自动更新设置。
