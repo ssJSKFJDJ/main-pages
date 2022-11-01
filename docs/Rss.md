@@ -36,9 +36,11 @@ template: overrides/main.html
 	https://ssjskfjdj.netlify.app/feed_rss_updated.xml
     ```
 
+
 [一切都值得一试。]{难道不是吗?✨}
 
-!!! Tip inline end
+
+!!! Tip inline
 	
 	这样你便可以及时收到文档有哪些新脚本了
 
