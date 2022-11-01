@@ -105,14 +105,13 @@ template: overrides/main.html
 
 ### PublicDeck(功能牌堆)
 
-<p><small>本段作者:梦夜雨</small></p>
-<p><small>校对:简律纯</small></p>
+<p><small>本段作者:梦夜雨<br>校对:简律纯</small></p>
 
 > 如果你是牌堆作者，那么你可以[fork PublicDeck](https://github.com/ssJSKFJDJ/PublicDeck)仓库，然后按格式提交PR。
 
-=== ":octicons-file-16: 提交单个`*.json`文件"
+=== ":octicons-file-16: 提交`*.json`文件"
 
-      1. 若您提交的是单个`*.json`文件，请在牌堆内务必写上如下信息，否则审核将会打回您的文件，这么做的理由是为了让您的脚本在被他人下载使用时，让他人知晓作者是谁，(若有报错)如何联系等。
+      1. 请务必在牌堆内写上如下信息，否则审核将会打回您的文件，这么做的理由是为了让您的脚本在被他人下载使用时，让他人知晓作者是谁，(若有报错)如何联系等。
       ```json
       {
         "_author":[
