@@ -36,7 +36,12 @@ template: overrides/main.html
 	https://ssjskfjdj.netlify.app/feed_rss_updated.xml
     ```
 
-[一切都值得一试。]{难道不是吗?✨}
+<br>
+<div class="center-aligned">
+    <div class="center-core">
+        [一切都值得一试。]{难道不是吗?✨}
+    </div>
+</div>
 
 <br>
 <br>
