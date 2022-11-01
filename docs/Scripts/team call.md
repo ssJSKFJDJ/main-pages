@@ -16,7 +16,7 @@ categories:
 
 ???+ example "To do list"
     - [x] 自动清除群team清空之后的缓存
-    - [ ] 加入kp设置功能，使每群[只有kp可以使用team call]{真的有必要吗？}
+    - [ ] 加入kp设置功能，使每群只有kp可以使用team call~~(不过真的有必要吗？)~~
 
 ### 文件目录
 ```
