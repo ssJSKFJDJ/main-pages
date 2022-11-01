@@ -159,7 +159,7 @@ nav:
   - Start: 
     - Announcement: 'start.md'
     - What's New: WhatsNew.md
-  - Categories: './categories'
+  # - Categories: './categories
   - Scrpts:
     - Genshin_Impact_tts.lua: Scripts/Genshin_Impact_tts.md
     - team call: Scripts/team call.md
