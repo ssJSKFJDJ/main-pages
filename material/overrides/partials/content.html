@@ -19,8 +19,6 @@
 
 {% if not "\x3ch1" in page.content %}
   <h1>{{ page.title | d(config.site_name, true)}}</h1>
-  <br>
-  <p>{{ git_show_history_log }}</p>
 {% endif %}
 
 {{ page.content }}
