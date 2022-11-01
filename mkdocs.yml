@@ -158,7 +158,7 @@ nav:
   - Home: index.md
   - Start: 
     - Announcement: 'start.md'
-    - Guide: Guide.md
+    - What's New: WhatsNew.md
   - Categories: './categories'
   - Scrpts:
     - Genshin_Impact_tts.lua: Scripts/Genshin_Impact_tts.md
