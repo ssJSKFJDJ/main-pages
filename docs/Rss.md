@@ -36,5 +36,10 @@ template: overrides/main.html
 	https://ssjskfjdj.netlify.app/feed_rss_updated.xml
     ```
 
+<br>
 
 [一切都值得一试。]{难道不是吗?✨}
+
+<br>
+
+{{ git_show_history_log }}
