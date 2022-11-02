@@ -147,9 +147,9 @@
     "description": []
   },
   {
-    "title": "Midido",
-    "file_name": "Midido",
-    "url": "https://ssjskfjdj.netlify.app/wiki/Midido/",
+    "title": "Guide",
+    "file_name": "midido-guide",
+    "url": "https://ssjskfjdj.netlify.app/wiki/midido-guide/",
     "tags": [],
     "description": []
   },
@@ -161,9 +161,16 @@
     "description": []
   },
   {
-    "title": "mml530",
+    "title": "mml 导引",
     "file_name": "command_zh",
     "url": "https://ssjskfjdj.netlify.app/wiki/mml530/doc/command_zh/",
+    "tags": [],
+    "description": []
+  },
+  {
+    "title": "Guide",
+    "file_name": "mml-guide",
+    "url": "https://ssjskfjdj.netlify.app/wiki/mml530/doc/mml-guide/",
     "tags": [],
     "description": []
   },
