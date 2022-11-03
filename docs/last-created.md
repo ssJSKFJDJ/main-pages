@@ -13,7 +13,6 @@ template: overrides/main.html
 > 2022-10-03
 
 ??? missing
-	
 	1.[wiki:Midido](../wiki/midido-guide)
 	扩展库Midido的wiki使用教程.
 	
