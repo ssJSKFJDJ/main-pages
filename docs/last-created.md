@@ -7,7 +7,7 @@ template: overrides/main.html
 > 2022-11-03
 
 ??? warning
-	1.[Genshin_Impact_tts.lua](../wiki/mml530/doc/mml-guide/)
+	1.[mml530 guide](../wiki/mml530/doc/mml-guide/)
 	listen2me的mml教程.
 	
 > 2022-10-03
