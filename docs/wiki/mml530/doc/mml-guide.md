@@ -24,8 +24,10 @@ status: new
 
     <figure markdown>
     [![https://zhuanlan.zhihu.com/p/31864712](image/mml-guide/1667457543198.png){ width="300" }]{注意是小写}
-    <small><figcaption>五线谱音名唱名简谱对应关系</figcaption></small>
+    <small><figcaption>五线谱音名唱名简谱对应关系[^1]</figcaption></small>
     </figure>
+
+    [^1]:[乐理干货：史上最全的五线谱基础教程！](https://zhuanlan.zhihu.com/p/31864712)
 
     ??? Tip "高级语法"
         ```yaml
