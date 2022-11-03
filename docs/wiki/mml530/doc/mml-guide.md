@@ -1,5 +1,6 @@
 ---
 template: overrides/main.html
+status: new
 ---
 # mml 导引
 
@@ -11,34 +12,49 @@ template: overrides/main.html
     5. `e` mi音,简谱内的3
     6. `f` fa音,简谱内的4
     7. `g` sol音,简谱内的5
+    > 不存在大写的音名
 
 === ":octicons-file-16:`README.md`"
-  
-    mml530是[`listen2me`](https://github.com/ssJSKFJDJ/listen2me/)功能模块所采用的一个mml转mid项目，目前该项目原创作团队已经停止更新，而其技术文档包含大量平假名、片假名，翻译起来极其困难，因此在这里开放出来，希望有人能够一点一点翻译出来吧。
-    
-    这篇文档主要针对那些 ==初识mml语法== 的人，同时原作者们根据他们多年使用mml以及编写 `*.mml`乐谱的经验修改并扩展了原本大家普遍熟悉的mml语法，就比如上古卷轴里的mml语法是 ==不分大小写== 的，但在这里是 ==严格区分== 的。
+
+    mml530是[`listen2me.lua`](https://github.com/ssJSKFJDJ/listen2me/)功能模块所采用的一个mml转mid项目，目前该项目原创作团队已经停止更新，而其技术文档包含大量平假名、片假名，翻译起来极其困难，因此在这里开放出来，希望有人能够一点一点翻译出来吧。
+
+    这篇文档主要针对那些 ==初识mml语法== 的人，同时原作者们根据他们多年使用mml以及编写`*.mml`乐谱的经验修改并扩展了原本大家普遍熟悉的mml语法，就比如上古卷轴里的mml语法是 ==不分大小写== 的，但在这里是 ==严格区分== 的。
 
 === ":octicons-list-ordered-16:本章所用到的所有语法"
 
-    [![1667425338681](image/mml-guide/1667425338681.png)]{我怎么感觉我应该换一张图，这边的大写字母应该都改成==小写==}
-    ```yaml
-    kn1(,n2,n3): 指定力度
-    krn1(,n2): 随机范围力度
-    ln: 延音
-    on: 调整八度，修改音区[^1]
-    ```
+    <figure markdown>
+    [![https://zhuanlan.zhihu.com/p/31864712](image/mml-guide/1667457543198.png){ width="300" }]{注意是小写}
+    <small><figcaption>五线谱音名唱名简谱对应关系</figcaption></small>
+    </figure>
 
-## 知识点
+    ??? Tip "高级语法"
+        ```yaml
+        kn1(,n2,n3): 指定力度
+        krn1(,n2): 随机范围力度
+        ln: 延音
+        on: 调整八度，修改音区
+        ```
 
-#### ==on== 调整八度
+## **知识点**
+
+### `cdefgab` 基本七音
+
+向bot发送以 `l2m>`开头的消息时，便会触发作曲机制。
+
+```
+l2m>A cdefgab
+```
+
+### `on` 调整八度
+
 调整八度，改变音区，默认为4。
-```md title="例1.reply"
+
+```
 l2m>A o4a o5a
 ```
-## **log**
-
-{{ git_show_history_log }}
-
+<p align="center">
+    <a class="md-button" href="wiki/mml530/doc/forward.md">进阶👉</a>
+</p>
 
 <!-- pn1(,n2,n3)        パンポット、恃步猛、スイッチ
 qn1,n2             ゲ〖トタイム、呵你券不墓
@@ -165,4 +181,3 @@ Z{...}             恃眶遍换コマンド。猛の洛掐、颅し换、苞き�
 `> ~n                 ベンド。BSnと票じ。
 `> ?                  トラック回年のワイルドカ〖ド∈'?'は'A'×'Z'を山す∷
 `> \                  乖の擂り手し -->
-
