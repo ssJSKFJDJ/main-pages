@@ -1,6 +1,6 @@
 ---
 template: overrides/main.html
-
-status: new
+status: New
 ---
 # mml 进阶
+

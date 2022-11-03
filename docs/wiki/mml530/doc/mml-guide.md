@@ -55,7 +55,7 @@ l2m>A cdefgab
 l2m>A o4a o5a
 ```
 <p align="center">
-    <a class="md-button" href="wiki/mml530/doc/forward.md">进阶👉</a>
+    <a class="md-button" href="../forward">进阶👉</a>
 </p>
 
 <!-- pn1(,n2,n3)        パンポット、恃步猛、スイッチ
