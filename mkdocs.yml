@@ -71,20 +71,39 @@ theme:
 
 # Plugins
 plugins:
+# pip install git+https://github.com/fmaida/hello-dolly-mkdocs-plugin
   - hello-dolly
+# mkdocs自带的search插件
   - search
+# pip install git+https://github.com/srymh/MkdocsTagPlugin
   - mdoctag
+# pip install mkdocs-git-revision-date-plugin 根据github文件信息表示最后更新时间
   - git-revision-date
+# pip install mkdocs-git-authors-plugin 显示贡献者的插件
   - git-authors:
       show_contribution: true
       show_line_count: true
       count_empty_lines: true
+# pip install mkdocs-rss-plugin
   - rss
+# pip install mkdocs-print-site-plugin
   - print-site
+# pip install mkdocs-izsam-video 插入本地视频，基于mkdocs-video插件
+  - mkdocs-izsam-video:
+      mark: "video" # ![video](./xxx.mp4)
+# pip install mkdocs-tooltips 悬浮提示 []{提示}
   - tooltips
+# pip install mkdocs-categories-plugin 分类插件
   - categories
+# pip install mkdocs-git-show-history-log-plugin {{ git_show_history_log }}
   - git-show-history-log:
       max_number_of_commits: 3
+# pip install mkdocs-video
+  - mkdocs-video:
+      mark: "video-2"
+      is_video: True
+      video_autoplay: True
+
 # Customization
 extra:
   analytics:

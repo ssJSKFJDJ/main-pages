@@ -72,7 +72,7 @@ A cdefgab
 
 ### `on` 调整八度
 
-调整八度，改变音区，默认为4。
+<a href="../audio/sample-on.mp3" onclick="playItHere(event, this)">[🔊]{点击播放}</a> 调整八度，改变音区，默认为4。
 
 ```
 l2m>
@@ -81,7 +81,7 @@ A o6a o6e o6d
 
 ### `-` 降调处理
 
-以基准音调1=c进行降调处理，升调同理。
+<a href="../audio/sample--.mp3" onclick="playItHere(event, this)">[🔊]{点击播放}</a> 以基准音调1=c进行降调处理，升调同理。
 
 ```
 l2m>
@@ -90,7 +90,7 @@ A o6a- o6e- o6d-
 
 ### `ln` 延音处理
 
-该命令通过延音来比拟实际弹钢琴时的离合器。
+<a href="../audio/sample-ln.mp3" onclick="playItHere(event, this)">[🔊]{点击播放}</a> 该命令通过延音来比拟实际弹钢琴时的离合器。
 
 ```
 l2m>
@@ -99,7 +99,7 @@ A o6a- o6e- o6l6d-
 
 ### `tn` 改变曲速
 
-该项命令可以调整这个音符的长度，`n`的范围是1~65535。
+<a href="../audio/sample-tn.mp3" onclick="playItHere(event, this)">[🔊]{点击播放}</a> 该项命令可以调整这个音符的长度，`n`的范围是1~65535。
 
 ```
 l2m>
@@ -108,16 +108,16 @@ A t240 o6a- o6e- o6l6d-
 
 ### `Qn` 保持时间
 
-音符按下后保持这种状态的时间。
+<a href="../audio/sample-Qn.mp3" onclick="playItHere(event, this)">[🔊]{点击播放}</a> 音符按下后保持这种状态的时间。
 
 ```
 l2m>
-A t240 o6a- o6e- o6l6d8-
+A t240 o6Q8a- o6Q2e- o6l6d-
 ```
 
 ### `1A` 多轨
 
-设置生成多个音轨，这样可以演奏和声，不一定非要`1A`，也可以是别的字母。
+<a href="../audio/sample-1A.mp3" onclick="playItHere(event, this)">[🔊]{点击播放}</a> 设置生成多个音轨，这样可以演奏和声，不一定非要`1A`，也可以是别的字母。
 
 ```
 l2m>
@@ -127,14 +127,29 @@ B t240 o4a2
 
 ### `r` 休止音符
 
-原文档给出的日语是`蒂射`，不知所以然，作用是占一格位不演奏。
+<a href="../audio/sample-r.mp3" onclick="playItHere(event, this)">[🔊]{点击播放}</a> 原文档给出的日语是`蒂射`，不知所以然，作用是占一格位不演奏。
 
 ```
 l2m>
 A t240 o6a- o6e- o6l6d-
-B t240 rr o4a2 
+B t240 r    r    o4a2 
 ```
-
+<!-- <a href="../audio/sample-r.mp3">Play the sound</a> -->
 <p align="center">
     <a class="md-button" href="../forward">进阶👉</a>
 </p>
+<!-- The following needs to be inserted somewhere on the page for the player(s) to work. -->
+<!-- <midi-player href="../audio/sample-r.mid" onclick="playItHere(event, this)" sound-font>[🔊]{点击播放}</midi-player>  -->
+<script src="https://cdn.jsdelivr.net/combine/npm/tone@14.7.58,npm/@magenta/music@1.22.1/es6/core.js,npm/focus-visible@5,npm/html-midi-player@1.4.0"></script>
+
+<script>
+function playItHere(e, link) {
+  var audio = document.createElement("audio");
+  var src = document.createElement("source");
+  src.src = link.href;
+  audio.appendChild(src);
+  audio.play();
+  e.preventDefault();
+}
+</script>
+
