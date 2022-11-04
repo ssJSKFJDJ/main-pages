@@ -115,7 +115,7 @@ l2m>
 A t240 o6Q8a- o6Q2e- o6l6d-
 ```
 
-### `1A` 多轨
+### `1A` 多轨生成
 
 <a href="../audio/sample-1A.mp3" onclick="playItHere(event, this)">[🔊]{点击播放}</a> 设置生成多个音轨，这样可以演奏和声，不一定非要`1A`，也可以是别的字母。
 
