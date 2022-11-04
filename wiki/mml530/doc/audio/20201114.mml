@@ -1,0 +1,165 @@
+[Settings]
+Encoding=gb2312
+Title=
+Source=
+Memo=
+[Channel1]
+//#using_extension
+//#using_channel = 1
+
+
+/*M 0  */  t60
+/*M 0  */  // Close Grand
+/*M 0  */  v7>g+16v5d+16v6<<a2>e4.
+/*M 1  */  g+8v8<b2>f+4.
+/*M 2  */  v5b8v4c+2.v5b8
+/*M 3  */  g+8v4c+4.v7>c+8v5<<b4.
+/*M 4  */  >b8v7<a4.v8>>g+16c+16v6<e4.
+/*M 5  */  v5g+8v7<b4.v4>d+4.v5>d+8
+/*M 6  */  g+8v8<c+8v5e8g+8v6>d+8e8d+8c+8
+/*M 7  */  v8<g+8v6c+8v5e8v6g+4v5<b8v4>d+8v3f+8
+/*M 8  */  v2b8v6<a8>c+8v3e8v6c+8v4e8v3g+8v7>c+8
+/*M 9  */  <g+8v4<b8v6>d+8v5f+8v3d+8v5f+8v4b8v3>d+8
+/*M 10 */  v6<b8v5c+8v4e8v6g+8v8>d+8v7e8d+8v6<b8
+/*M 11 */  g+8c+8v4e8v6g+8>c+8<<b8>d+8v7f+8
+/*M 12 */  v6b8<a8>c+8v3e8v6c+8v7e8v5g+8v6>c+8
+/*M 13 */  <g+8<b8>d+8v7f+8v6d+8v4f+8v6b8v8>d+8
+/*M 14 */  v4<b8v3c+8v6e8g+8v4e8v8>c+8v6<g+8v5e8
+/*M 15 */  v6g+8v5c+8e8v4g+8v3e8v7>c+8v6<g+8v3e8
+/*M 16 */  g+8v5c+8v3f+8v6g+8v7>c+4<g+16v5d+16v6<<a2
+/*M 17 */  >e4.g+8v8<b2
+/*M 18 */  >f+4.v5b8v4c+2.
+/*M 19 */  v5b8g+8v4c+4.
+/*M 20 */  v7>c+8v5<<b4.>b8v7<a4.
+/*M 21 */  v8>>g+16c+16v6<e4.v5g+8v7<b4.
+/*M 22 */  v4>d+4.v5>d+8g+8v8<c+8
+/*M 23 */  v5e8g+8v6>d+8e8d+8c+8v8<g+8v6c+8
+/*M 24 */  v5e8v6g+4v5<b8v4>d+8v3f+8v2b8v6<a8
+/*M 25 */  >c+8v3e8v6c+8v4e8v3g+8v7>c+8<g+8v4<b8
+/*M 26 */  v6>d+8v5f+8v3d+8v5f+8v4b8v3>d+8v6<b8v5c+8
+/*M 27 */  v4e8v6g+8v8>d+8v7e8d+8v6<b8g+8c+8
+/*M 28 */  v4e8v6g+8>c+8<<b8>d+8v7f+8v6b8<a8
+/*M 29 */  >c+8v3e8v6c+8v7e8v5g+8v6>c+8<g+8<b8
+/*M 30 */  >d+8v7f+8v6d+8v4f+8v6b8v8>d+8v4<b8v3c+8
+/*M 31 */  v6e8g+8v4e8v8>c+8v6<g+8v5e8v6g+8v5c+8
+/*M 32 */  e8v4g+8v3e8v7>c+8v6<g+8v3e8g+8v5c+8
+/*M 33 */  v3f+8v6g+8v7>c+16
+[Channel2]
+//#using_extension
+//#using_channel = 1
+
+
+/*M 0  */  r8v6>c+2&c+8v7<g+4
+/*M 1  */  v6>g+16v7d+16c+2&c+8v5<b4
+/*M 2  */  v7>g+16d+16v8e4<g+2.
+/*M 3  */  >g+8v5<e4v7>g+8v6e8v7<d+4
+/*M 4  */  >c+16v6d+16e16v7d+16v 6<c+4.v7>d+8v6<g+4
+/*M 5  */  v7>g+16c+16v6d+8<d+4.v5f+4.&
+/*M 6  */  f+16>d+2.&d+8.
+/*M 7  */  d+8d+8d+2.
+/*M 8  */  v7g+8v9>c+8.c+8<g+16v8g+8v10>d+4.
+/*M 9  */  v9<g+16g+16v10>e16d+16v9c+4v8<g+8>d+16v7c+16<g+4
+/*M 10 */  v8>c+16v9<g+16>c+2.&c+8
+/*M 11 */  v6<g+16v5c+16v6d+2&d+8v5g+16c+16e16v6d+16
+/*M 12 */  e16d+16e16d+16v5c+4v7g+8>c+4.
+/*M 13 */  v5<g+8>d+2.&d+8
+/*M 14 */  v9d+16v8<g+16>e16v9d+16e16v8d+16e16d+16e16d+16e16d+16v9c+4
+/*M 15 */  v7d+16<g+16g+16v8e16g+16c+16d+8v7g+16c+16d+8g+16d+16v8c+8
+/*M 16 */  d+16v7c+16e16d+16e16d+16e16v6d+4.&d+16<c+2&
+/*M 17 */  c+8v7<g+4v6>g+16
+/*M 17 */  v7d+16c+2&
+/*M 18 */  c+8v5<b4v7>g+16d+16v8e4
+/*M 19 */  <g+2.>g+8
+/*M 20 */  v5<e4v7>g+8v6e8v7<d+4>c+16v6d+16e16v7d+16
+/*M 21 */  v6<c+4.v7>d+8v6<g+4v7>g+16c+16v6d+8
+/*M 22 */  <d+4.v5f+4.&f+16>d+2.&
+/*M 23 */  d+8.d+8d+8
+/*M 24 */  d+2.v7g+8v9>c+8
+/*M 25 */  v5<g+8g+8v8g+8v10>d+8v5<g+8g+8v9g+16g+16v10>e16d+16
+/*M 26 */  v9c+4v8<g+8>d+16v7c+16<g+4v8>c+16v9<g+16>c+2.&
+/*M 27 */  c+8v6<g+16
+/*M 27 */  v5c+16v6d+2&
+/*M 28 */  d+8v5g+16c+16e16v6d+16e16d+16e16d+16
+/*M 29 */  v5c+4v7g+8>c+16<g+16>c+16<g+16>c+8v5<g+16v7g+16v5>d+8
+/*M 30 */  v7<g+16>d+16<g+2&g+8v9>d+16v8<g+16>e16v9d+16
+/*M 31 */  e16v8d+16e16d+16e16d+16e16d+16v9c+4v7d+16<g+16g+16v8e8
+/*M 32 */  c+16d+8.v7c+16d+8.d+16v8c+8d+16v7c+16e16d+16
+/*M 33 */  e16d+16e16v6d+16
+[Channel3]
+//#using_extension
+//#using_channel = 1
+
+
+/*M 0  */  r4v6c+2&c+8v8>c+4.
+/*M 1  */  v5<d+2&d+8v7>d+4.
+/*M 2  */  v6<e2.&
+/*M 3  */  e8.v7>d+8.v4<g+8.v6>d+8v7d+8.v5<f+4.
+/*M 4  */  v7>e16d+16v4<e2v8>c+2
+/*M 5  */  v5<f+4v4>g+16v5d+16<b4.
+/*M 6  */  >c+2.&c+8.
+/*M 7  */  c+8e8c+1&
+/*M 8  */  c+1&
+/*M 9  */  c+1&
+/*M 10 */  c+1&
+/*M 11 */  c+1&
+/*M 12 */  c+1&
+/*M 13 */  c+1&
+/*M 14 */  c+1&
+/*M 15 */  c+1&
+/*M 16 */  c+2&c+8.
+/*M 17 */  v6<<c+2&c+8v8>c+4.
+/*M 18 */  v5<d+2&d+8v7>d+4.
+/*M 19 */  v6<e2.&e8.v7>d+8.
+/*M 20 */  v4<g+8.v6>d+8v7d+8.v5<f+4.
+/*M 21 */  v7>e16d+16v4<e2v8>c+2
+/*M 22 */  v5<f+4v4>g+16v5d+16<b4.>c+2.&
+/*M 23 */  c+8.c+8e8
+/*M 24 */  c+1
+/*M 25 */  >c+2d+8d+8
+[Channel4]
+//#using_extension
+//#using_channel = 1
+
+
+/*M 0  */  r4.v8e1
+/*M 1  */  v5f+1&
+/*M 2  */  f+8v7>d+8v8e8d+2
+/*M 3  */  v7e4.&e16v10g2&
+/*M 4  */  g8.v8c+1&
+/*M 5  */  c+1&
+/*M 6  */  c+1&
+/*M 7  */  c+1&
+/*M 8  */  c+1&
+/*M 9  */  c+1&
+/*M 10 */  c+1&
+/*M 11 */  c+1&
+/*M 12 */  c+1&
+/*M 13 */  c+1&
+/*M 14 */  c+1&
+/*M 15 */  c+1&
+/*M 16 */  c+2.
+/*M 17 */  <<e1
+/*M 18 */  v5f+1&
+/*M 19 */  f+8v7>d+8v8e8d+2
+/*M 20 */  v7e2c+2&
+/*M 21 */  c+8v8c+8
+[Channel5]
+//#using_extension
+//#using_channel = 1
+
+
+/*M 0  */  r1
+/*M 1  */  r1
+/*M 2  */  r1
+/*M 3  */  r2.v7>c+8
+[Channel6]
+//#using_extension
+//#using_channel = 0
+
+
+/*M 0  */  // Close Grand
+[3MLE EXTENSION]
+/* DO NOT EDIT!! DATA VOID IF "3MLE EXTENSION" IS EDITED. */
+c=1556745910
+d=ZgEAAB7qVvoBAAAAQlpoOTFBWSZTWZOUhw4AAGbv5f7U0Aw/AEAAJAAsSBAAAADAgEAAAEAIAKAAkgyiNPU9UepvUEGTDQaCSFTaeqNMRphBoAfhTfttqFNYr4DdMszM
+d=8CiHd3S8sXMIlkhccOWOVSSM8HRpcJzgyhzGEo3/NJyFQowFK3FCvL1eDAF1Lhi7FQZA7AygsFXzuDIFERERueAeAY9Tj1OYIFDMzN2LuSKcKEhJykOHAA==
