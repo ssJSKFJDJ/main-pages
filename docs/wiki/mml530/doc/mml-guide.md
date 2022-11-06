@@ -153,3 +153,66 @@ function playItHere(e, link) {
 }
 </script>
 
+<script>
+    window.onload=function () {
+      window.onkeypress=function (e) {
+          //  alert(e.key+' 按键对应的值: '+e.keyCode)
+         if (e.key=='1')
+        {
+        //   alert('G键被点击')
+        // <a href="../audio/sample-r.mp3" onclick="playItHere(event, this)">[🔊]{点击播放}</a>
+        var audio = document.createElement("audio");
+        audio.src = "../audio/c5.mp3";
+        audio.play();
+        };
+         if (e.key=='2')
+        {
+        //   alert('G键被点击')
+        // <a href="../audio/sample-r.mp3" onclick="playItHere(event, this)">[🔊]{点击播放}</a>
+        var audio = document.createElement("audio");
+        audio.src = "../audio/d5.mp3";
+        audio.play();
+        };
+         if (e.key=='3')
+        {
+        //   alert('G键被点击')
+        // <a href="../audio/sample-r.mp3" onclick="playItHere(event, this)">[🔊]{点击播放}</a>
+        var audio = document.createElement("audio");
+        audio.src = "../audio/e5.mp3";
+        audio.play();
+        };
+         if (e.key=='4')
+        {
+        //   alert('G键被点击')
+        // <a href="../audio/sample-r.mp3" onclick="playItHere(event, this)">[🔊]{点击播放}</a>
+        var audio = document.createElement("audio");
+        audio.src = "../audio/f5.mp3";
+        audio.play();
+        };
+         if (e.key=='5')
+        {
+        //   alert('G键被点击')
+        // <a href="../audio/sample-r.mp3" onclick="playItHere(event, this)">[🔊]{点击播放}</a>
+        var audio = document.createElement("audio");
+        audio.src = "../audio/g5.mp3";
+        audio.play();
+        };
+         if (e.key=='6')
+        {
+        //   alert('G键被点击')
+        // <a href="../audio/sample-r.mp3" onclick="playItHere(event, this)">[🔊]{点击播放}</a>
+        var audio = document.createElement("audio");
+        audio.src = "../audio/a5.mp3";
+        audio.play();
+        };
+         if (e.key=='7')
+        {
+        //   alert('G键被点击')
+        // <a href="../audio/sample-r.mp3" onclick="playItHere(event, this)">[🔊]{点击播放}</a>
+        var audio = document.createElement("audio");
+        audio.src = "../audio/b5.mp3";
+        audio.play();
+        }
+      }
+    }
+  </script>
