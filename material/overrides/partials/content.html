@@ -29,5 +29,7 @@
 ) %}
   {% include "partials/source-file.html" %}
 {% endif %}
-
+{% if git_page_authors %}
+  <small>贡献者: {{ git_page_authors | default('enable mkdocs-git-authors-plugin') }}</small>
+{% endif %}
 {% include "partials/feedback.html" %}

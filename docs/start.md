@@ -16,10 +16,6 @@ template: overrides/main.html
 
 <img src="https://ghchart.rshah.org/cypress0522" />
 
-**修改记录:**
-
-{{ git_show_history_log }}
-
 ## Contribute
 
 !!! list inline
@@ -125,7 +121,7 @@ template: overrides/main.html
       4. 上传完成后，点击底部的绿色Commit changes按钮
       5. 此时您自己的库已经更新，之后需要在界面中寻找Pull request按钮并点击
       6. 在Pull Requests中，点击右边的绿色New pull request按钮或是中下蓝色的create a pull requret按钮
-      7. 在新界面中选择绿色的Create pull request按钮 ，请求将代码提交到ssJSKFJDJ的库中
+      7. 在新界面中选择绿色的<p style="color:green">Create pull request</p>按钮 ，请求将代码提交到ssJSKFJDJ的库中
 
       
 ### Module(功能模块)
@@ -190,28 +186,28 @@ template: overrides/main.html
 
 > to be...
 
-## License
+???+ Tip "License"
 
-```
-  MIT License
+    ```
+    MIT License
 
-Copyright (c) 2022 ssJSKFJDJ
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-```
+    Copyright (c) 2022 ssJSKFJDJ
+    
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+    
+    The above copyright notice and this permission notice shall be included in all
+    copies or substantial portions of the Software.
+    
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+    SOFTWARE.
+    ```
