@@ -1269,14 +1269,49 @@
 <p><strong>api参数请严格按照 <span class="tooltip hint--top" aria-label="https://docs.go-cqhttp.org/api/">API|go-cqhttp帮助中心</span> 中的排列顺序，即从上到下，按序传入，否则可能会出现错误。</strong></p>
 <p>例如，如果在API|go-cqhttp帮助中心中的内容如下：</p>
 <p>终结点：/send_msg
-Data table, columns centered
-| 字段名         | 数据类型| 默认值  | 说明                                                                             |
-| :------------: | :-----: | :-----: | :------------------------------------------------------------------------------: |
-| <code>message_type</code> | <code>string</code>| <code>-</code>     |<code>消息类型, 支持private、group,分别对应私聊、群组,如不传入,则根据传入的*_id参数判断</code> |
-| <code>user_id</code>      | <code>int64</code> | <code>-</code>     |<code>对方 QQ 号 ( 消息类型为 private 时需要 )</code>                                         |
-| <code>group_id</code>     | <code>int64</code> | <code>-</code>     |<code>群号 ( 消息类型为 group 时需要 )</code>                                                 |
-| <code>message</code>      |<code>message</code>| <code>-</code>     |<code>要发送的内容</code>                                                                     |
-| <code>auto_escape</code>  |<code>boolean</code>| <code>flase</code> |<code>消息内容是否作为纯文本发送 ( 即不解析 CQ 码 ) , 只在 message 字段是字符串时有效</code>   |</p>
+Data table, columns centered</p>
+<table>
+<thead>
+<tr>
+<th align="center">字段名</th>
+<th align="center">数据类型</th>
+<th align="center">默认值</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>message_type</code></td>
+<td align="center"><code>string</code></td>
+<td align="center"><code>-</code></td>
+<td align="center"><code>消息类型, 支持private、group,分别对应私聊、群组,如不传入,则根据传入的*_id参数判断</code></td>
+</tr>
+<tr>
+<td align="center"><code>user_id</code></td>
+<td align="center"><code>int64</code></td>
+<td align="center"><code>-</code></td>
+<td align="center"><code>对方 QQ 号 ( 消息类型为 private 时需要 )</code></td>
+</tr>
+<tr>
+<td align="center"><code>group_id</code></td>
+<td align="center"><code>int64</code></td>
+<td align="center"><code>-</code></td>
+<td align="center"><code>群号 ( 消息类型为 group 时需要 )</code></td>
+</tr>
+<tr>
+<td align="center"><code>message</code></td>
+<td align="center"><code>message</code></td>
+<td align="center"><code>-</code></td>
+<td align="center"><code>要发送的内容</code></td>
+</tr>
+<tr>
+<td align="center"><code>auto_escape</code></td>
+<td align="center"><code>boolean</code></td>
+<td align="center"><code>flase</code></td>
+<td align="center"><code>消息内容是否作为纯文本发送 ( 即不解析 CQ 码 ) , 只在 message 字段是字符串时有效</code></td>
+</tr>
+</tbody>
+</table>
 <p>那么你可以这么传入参数：gapi.http_post("send_msg", "group", nil, 971050440, "test,test~").</p>
 <p>然后，在调用这个函数时，骰娘便会向群聊<span class="tooltip hint--top" aria-label="☃️ssJSKFJDJ♬">971050440</span>发送一条信息: “test,test~”。</p>
 <div class="admonition note">
@@ -1296,7 +1331,7 @@ Data table, columns centered
 
 
 
-  <p><small>贡献者: <span class='git-page-authors git-authors'><a href='mailto:116723741+pineoncellar@users.noreply.github.com'>pine</a></span></small></p>
+  <p><small>贡献者: <span class='git-page-authors git-authors'><a href='mailto:hsiangnianian@outlook.com'>cypress0522</a> (1.04%), <a href='mailto:116723741+pineoncellar@users.noreply.github.com'>pine</a> (98.96%)</span></small></p>
 
 
   
