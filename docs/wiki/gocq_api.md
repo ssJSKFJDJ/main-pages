@@ -34,9 +34,9 @@
 将下载的压缩包解压，你会得到以下文件：
 
 ``` md
-    |——call.lua
-    |——call
-          |——list.json
+    |——gocq_api.lua
+    |——gocq_api
+          |——api_list.json
 ```
 
 一个名叫gocq_api的lua文件，与一个同名的文件夹，文件夹中含有一个api_list.json文件。
@@ -66,12 +66,6 @@ gapi = require("gocq_api")
 
 本库包含两个函数：
 
-    这个变量名，也就是gapi，当然可以换成其他的，只要你能记得住就可以了。
-
-然后，你就可以使用gapi.http_get()和gapi.http_post()来调用api函数了。
-
-### 三.函数介绍本库包含两个函数：
-
 - **http_post("终结点",参数1,参数2......)**
 - **http_get("终结点",参数1,参数2......)**
 
@@ -84,6 +78,7 @@ gapi = require("gocq_api")
 
 终结点：/send_msg
 Data table, columns centered
+
 | 字段名         | 数据类型| 默认值  | 说明                                                                             |
 | :------------: | :-----: | :-----: | :------------------------------------------------------------------------------: |
 | `message_type` | `string`| `-`     |`消息类型, 支持private、group,分别对应私聊、群组,如不传入,则根据传入的*_id参数判断` |
