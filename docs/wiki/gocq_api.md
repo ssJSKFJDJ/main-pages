@@ -1,3 +1,7 @@
+---
+template: overrides/main.html
+status: New
+---
 # gocq_api
 
 !!! Info inline 
@@ -76,8 +80,9 @@ gapi = require("gocq_api")
 例如，如果在API|go-cqhttp帮助中心中的内容如下：
 
 
-终结点：/send_msg
-Data table, columns centered
+终结点：/send_msg Data table, columns centered
+
+
 
 | 字段名         | 数据类型| 默认值  | 说明                                                                             |
 | :------------: | :-----: | :-----: | :------------------------------------------------------------------------------: |
@@ -86,6 +91,8 @@ Data table, columns centered
 | `group_id`     | `int64` | `-`     |`群号 ( 消息类型为 group 时需要 )`                                                 |
 | `message`      |`message`| `-`     |`要发送的内容`                                                                     |
 | `auto_escape`  |`boolean`| `flase` |`消息内容是否作为纯文本发送 ( 即不解析 CQ 码 ) , 只在 message 字段是字符串时有效`   |
+
+
 
 那么你可以这么传入参数：gapi.http_post("send_msg", "group", nil, 971050440, "test,test~").
 
