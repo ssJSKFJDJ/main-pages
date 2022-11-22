@@ -193,6 +193,7 @@ nav:
     - mml530:  
       - Guide: wiki/mml530/doc/mml-guide.md
       - Forward: wiki/mml530/doc/forward.md
+    - gocq_api: wiki/gocq_api.md
   # - About:
   #   - License: about/license.md
   #   - Release Notes: about/release-notes.md
