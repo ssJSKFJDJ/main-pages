@@ -92,14 +92,10 @@ Data table, columns centered
 | `message`      |`message`| `-`     |`要发送的内容`                                                                     |
 | `auto_escape`  |`boolean`| `flase` |`消息内容是否作为纯文本发送 ( 即不解析 CQ 码 ) , 只在 message 字段是字符串时有效`   |
 
-那么你可以这么传入参数：gapi.http_post("send_msg", "group", , 971050440, "test,test~").
+那么你可以这么传入参数：gapi.http_post("send_msg", "group", nil, 971050440, "test,test~").
 
 然后，在调用这个函数时，骰娘便会向群聊[971050440]{☃️ssJSKFJDJ♬}发送一条信息: “test,test~”。
 
 !!! note "函数返回值"
 
-    这个函数会返回两个值，也就是API|go-cqhttp帮助中心中有说明的status与data，你可以设置两个变量来接收并发送它们。
-
-!!! note "函数返回值"
-
-    这个函数会返回两个值，也就是API|go-cqhttp帮助中心中有说明的status与data，你可以设置两个变量来保存他们。
+    这个函数会返回一个值，也就是API|go-cqhttp帮助中心中有说明的响应json数据，你可以设置一个变量来接收并发送它。
