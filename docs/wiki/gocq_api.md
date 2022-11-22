@@ -25,45 +25,62 @@
         <<: *default # 引用默认中间件
     ```
 
-### 一.下载与安装
+## 一.下载与安装
 
-要调用一个库，首先你得下载它（废话）
+要调用一个库，首先你得[下载它]{废话}
+
 你可以在。。。。。。。【之后再补】。。。。。。。。下载到这个库。
-将下载得到的压缩包解压，你会得到以下文件：
+
+将下载的压缩包解压，你会得到以下文件：
+
 ``` md
     |——call.lua
     |——call
           |——list.json
 ```
+
 一个名叫gocq_api的lua文件，与一个同名的文件夹，文件夹中含有一个api_list.json文件。
+
 接下来只要把gocq_api.lua和同名的文件夹一起扔进diceqq/plugin文件夹里面，对你的骰娘使用system load指令就好了。
+
 !!! note 
 
     当然，如果你希望的话，gocq_api.lua也可以放进diceki/lua文件夹里。
     但如果不修改其中路径的话，gocq_api文件夹就只能放在diceqq/plugin文件夹中。
 
-### 二.调用函数
+## 二.调用函数
 
 安装完成后，想要在插件中调用这个库，只需要一行这样的代码：
+
 ```lua
 gapi = require("gocq_api")
 ```
+
 !!! note inline end
 
     这个变量名，也就是gapi，当然可以换成其他的，只要你能记得住就可以了。
 
 然后，你就可以使用gapi.http_get()和gapi.http_post()来调用api函数了。
 
-### 三.函数介绍
+## 三.函数介绍
+
 本库包含两个函数：
+
+    这个变量名，也就是gapi，当然可以换成其他的，只要你能记得住就可以了。
+
+然后，你就可以使用gapi.http_get()和gapi.http_post()来调用api函数了。
+
+### 三.函数介绍本库包含两个函数：
 
 - **http_post("终结点",参数1,参数2......)**
 - **http_get("终结点",参数1,参数2......)**
 
 两个函数分别对应了两种api调用方法：post与get。两种方法的差异请参考 [API|go-cqhttp帮助中心]{https://docs.go-cqhttp.org/api/} 。
+
 **api参数请严格按照 [API|go-cqhttp帮助中心]{https://docs.go-cqhttp.org/api/} 中的排列顺序，即从上到下，按序传入，否则可能会出现错误。**
 
 例如，如果在API|go-cqhttp帮助中心中的内容如下：
+
 
 终结点：/send_msg
 Data table, columns centered
@@ -76,7 +93,13 @@ Data table, columns centered
 | `auto_escape`  |`boolean`| `flase` |`消息内容是否作为纯文本发送 ( 即不解析 CQ 码 ) , 只在 message 字段是字符串时有效`   |
 
 那么你可以这么传入参数：gapi.http_post("send_msg", "group", , 971050440, "test,test~").
-然后，在调用这个函数时，骰娘便会向群聊971050440（☃️ssJSKFJDJ♬）发送一条信息“test,test~”。
+
+然后，在调用这个函数时，骰娘便会向群聊[971050440]{☃️ssJSKFJDJ♬}发送一条信息: “test,test~”。
+
+!!! note "函数返回值"
+
+    这个函数会返回两个值，也就是API|go-cqhttp帮助中心中有说明的status与data，你可以设置两个变量来接收并发送它们。
+
 !!! note "函数返回值"
 
     这个函数会返回两个值，也就是API|go-cqhttp帮助中心中有说明的status与data，你可以设置两个变量来保存他们。
