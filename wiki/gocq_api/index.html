@@ -1251,14 +1251,14 @@
 <p>如果你早已配置好这些，请忽略这块内容。</p>
 <p>本函数库仅支持http post与http get两种api调用方式，所以在使用前请配置好http通信。</p>
 <p>参考配置：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>- http: # HTTP 通信设置
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  address: 127.0.0.1:15700 # HTTP监听地址，这里的端口【15700】如果改为了其他的，需在gocq_api.lua中同步改动http_port的值
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>  timeout: 5 # 反向 HTTP 超时时间, 单位秒，&lt;5时将被忽略
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>  long-polling: # 长轮询拓展
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    enabled: false       # 是否开启
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    max-queue-size: 2000 # 消息队列大小，0 表示不限制队列大小，谨慎使用
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>  middlewares:
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    &lt;&lt;: *default # 引用默认中间件
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">http</span><span class="p">:</span><span class="w"> </span><span class="c1"># HTTP 通信设置</span><span class="w"></span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="nt">address</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">127.0.0.1:15700</span><span class="w"> </span><span class="c1"># HTTP监听地址，这里的端口【15700】如果改为了其他的，需在gocq_api.lua中同步改动http_port的值</span><span class="w"></span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="nt">timeout</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5</span><span class="w"> </span><span class="c1"># 反向 HTTP 超时时间, 单位秒，&lt;5时将被忽略</span><span class="w"></span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">  </span><span class="nt">long-polling</span><span class="p">:</span><span class="w"> </span><span class="c1"># 长轮询拓展</span><span class="w"></span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w">       </span><span class="c1"># 是否开启</span><span class="w"></span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="nt">max-queue-size</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2000</span><span class="w"> </span><span class="c1"># 消息队列大小，0 表示不限制队列大小，谨慎使用</span><span class="w"></span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">  </span><span class="nt">middlewares</span><span class="p">:</span><span class="w"></span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span><span class="nt">&lt;&lt;</span><span class="p">:</span><span class="w"> </span><span class="nv">*default</span><span class="w"> </span><span class="c1"># 引用默认中间件</span><span class="w"></span>
 </code></pre></div>
 </details>
 <h2 id="_1">一.下载与安装<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
@@ -1295,7 +1295,7 @@
 <p>两个函数分别对应了两种api调用方法：post与get。两种方法的差异请参考 <a href="https://docs.go-cqhttp.org/api/">API|go-cqhttp帮助中心</a>{<a href="https://docs.go-cqhttp.org/api/">https://docs.go-cqhttp.org/api/</a>} 。</p>
 <p><strong>api参数请严格按照 <a href="https://docs.go-cqhttp.org/api/">API|go-cqhttp帮助中心</a>{<a href="https://docs.go-cqhttp.org/api/">https://docs.go-cqhttp.org/api/</a>} 中的排列顺序，即从上到下，按序传入，否则可能会出现错误。</strong></p>
 <p>例如，如果在API|go-cqhttp帮助中心中的内容如下：</p>
-<p>终结点：/send_msg</p>
+<p>终结点：<code>/send_msg</code></p>
 <table>
 <thead>
 <tr>
@@ -1351,13 +1351,13 @@
   <small>
     
       最后更新:
-      2022-11-22
+      2022-11-23
     
   </small>
 </div>
 
 
-  <small>贡献者: <span class='git-page-authors git-authors'><a href='mailto:hsiangnianian@outlook.com'>cypress0522</a> (8.26%), <a href='mailto:116723741+pineoncellar@users.noreply.github.com'>pine</a> (91.74%)</span></small>
+  <small>贡献者: <span class='git-page-authors git-authors'><a href='mailto:hsiangnianian@outlook.com'>cypress0522</a> (10.09%), <a href='mailto:116723741+pineoncellar@users.noreply.github.com'>pine</a> (89.91%)</span></small>
 
 
   
