@@ -9,7 +9,8 @@ template: overrides/main.html
 
 !!! Info
     - License: MIT.
-    - Author: Pedro Alves Valentim
+    - Author: Pedro Alves Valentim,简律纯
+    - Translator: 简律纯
 
 1. [`Midido`](./Midido): Midido的主模块，通过它可以调用Midido库里的所有内容。
 2. [`Constants`](./Constants): Midido的常量库。
