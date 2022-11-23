@@ -111,7 +111,72 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://ssjskfjdj.netlify.app/wiki/midido-guide/</loc>
+         <loc>https://ssjskfjdj.netlify.app/wiki/Midido/forward/</loc>
+         <lastmod>2022-11-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://ssjskfjdj.netlify.app/wiki/Midido/midido-guide/</loc>
+         <lastmod>2022-11-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://ssjskfjdj.netlify.app/wiki/Midido/forward/ArbitraryEvent/</loc>
+         <lastmod>2022-11-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://ssjskfjdj.netlify.app/wiki/Midido/forward/Chunk/</loc>
+         <lastmod>2022-11-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://ssjskfjdj.netlify.app/wiki/Midido/forward/Constants/</loc>
+         <lastmod>2022-11-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://ssjskfjdj.netlify.app/wiki/Midido/forward/MetaEvent/</loc>
+         <lastmod>2022-11-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://ssjskfjdj.netlify.app/wiki/Midido/forward/Midido/</loc>
+         <lastmod>2022-11-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://ssjskfjdj.netlify.app/wiki/Midido/forward/NoteEvent/</loc>
+         <lastmod>2022-11-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://ssjskfjdj.netlify.app/wiki/Midido/forward/NoteOffEvent/</loc>
+         <lastmod>2022-11-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://ssjskfjdj.netlify.app/wiki/Midido/forward/NoteOnEvent/</loc>
+         <lastmod>2022-11-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://ssjskfjdj.netlify.app/wiki/Midido/forward/ProgramChangeEvent/</loc>
+         <lastmod>2022-11-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://ssjskfjdj.netlify.app/wiki/Midido/forward/Track/</loc>
+         <lastmod>2022-11-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://ssjskfjdj.netlify.app/wiki/Midido/forward/Util/</loc>
+         <lastmod>2022-11-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://ssjskfjdj.netlify.app/wiki/Midido/forward/Writer/</loc>
          <lastmod>2022-11-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
