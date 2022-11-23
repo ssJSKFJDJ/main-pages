@@ -189,7 +189,21 @@ nav:
     - Print.lua: Module/Print.md
   - Wiki:
     - Midido: 
-      - Guide: wiki/midido-guide.md
+      - Guide: wiki/Midido/midido-guide.md
+      - Forward: 
+        - API LIST: wiki/Midido/forward.md
+        - Midido: wiki/Midido/forward/Midido.md
+        - Constants: wiki/Midido/forward/Constants.md
+        - Util: wiki/Midido/forward/Util.md
+        - ArbitraryEvent: wiki/Midido/forward/ArbitraryEvent.md
+        - Chunk: wiki/Midido/forward/Chunk.md
+        - MetaEvent: wiki/Midido/forward/MetaEvent.md
+        - NoteEvent: wiki/Midido/forward/NoteEvent.md
+        - NoteOffEvent: wiki/Midido/forward/NoteOffEvent.md
+        - NoteOnEvent: wiki/Midido/forward/NoteOnEvent.md
+        - PrgramChangeEvent: wiki/Midido/forward/ProgramChangeEvent.md
+        - Track: wiki/Midido/forward/Track.md
+        - Writer: wiki/Midido/forward/Writer.md
     - mml530:  
       - Guide: wiki/mml530/doc/mml-guide.md
       - Forward: wiki/mml530/doc/forward.md
