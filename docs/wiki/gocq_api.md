@@ -10,28 +10,36 @@ status: New
     
     请配合 [API|go-cqhttp帮助中心](https://docs.go-cqhttp.org/api/)使用此库。
 
-??? Quote
+!!! Quote
 
-    其实就是个低技术力的拓展函数库啦，要是能给大佬们帮上忙我就太荣幸了：）
+    其实就是个低技术力的拓展函数库啦
+    
+    要是能给大佬们帮上忙我就太荣幸了
+    
+    ❤️🧡💛💚💙💜🖤🤎🤍💝
 
-???+ Note "配置http通信" 
+
+## 零.配置http通信
+
+!!! Tip inline end
 
     如果你早已配置好这些，请忽略这块内容。
     
-    本函数库仅支持http post与http get两种api调用方式，所以在使用前请配置好http通信。
+
+本函数库仅支持http post与http get两种api调用方式，所以在使用前请配置好http通信。
     
-    参考配置：
+参考配置：
     
-    ``` yml
-    - http: # HTTP 通信设置
-      address: 127.0.0.1:15700 # HTTP监听地址，这里的端口【15700】如果改为了其他的，需在gocq_api.lua中同步改动http_port的值
-      timeout: 5 # 反向 HTTP 超时时间, 单位秒，<5时将被忽略
-      long-polling: # 长轮询拓展
-        enabled: false       # 是否开启
-        max-queue-size: 2000 # 消息队列大小，0 表示不限制队列大小，谨慎使用
-      middlewares:
-        <<: *default # 引用默认中间件
-    ```
+``` yml
+- http: # HTTP 通信设置
+  address: 127.0.0.1:15700 # HTTP监听地址，这里的端口【15700】如果改为了其他的，需在gocq_api.lua中同步改动http_port的值
+  timeout: 5 # 反向 HTTP 超时时间, 单位秒，<5时将被忽略
+  long-polling: # 长轮询拓展
+    enabled: false       # 是否开启
+    max-queue-size: 2000 # 消息队列大小，0 表示不限制队列大小，谨慎使用
+  middlewares:
+    <<: *default # 引用默认中间件
+```
 
 ## 一.下载与安装
 
@@ -79,9 +87,9 @@ gapi = require("gocq_api")
 - **http_post("终结点",参数1,参数2......)**
 - **http_get("终结点",参数1,参数2......)**
 
-两个函数分别对应了两种api调用方法：post与get。两种方法的差异请参考 [API|go-cqhttp帮助中心](https://docs.go-cqhttp.org/api/){https://docs.go-cqhttp.org/api/} 。
+两个函数分别对应了两种api调用方法：post与get。两种方法的差异请参考 [API|go-cqhttp帮助中心](https://docs.go-cqhttp.org/api/) 。
 
-**api参数请严格按照 [API|go-cqhttp帮助中心](https://docs.go-cqhttp.org/api/){https://docs.go-cqhttp.org/api/} 中的排列顺序，即从上到下，按序传入，否则可能会出现错误。**
+**api参数请严格按照 [API|go-cqhttp帮助中心](https://docs.go-cqhttp.org/api/) 中的排列顺序，即从上到下，按序传入，否则可能会出现错误。**
 
 例如，如果在API|go-cqhttp帮助中心中的内容如下：
 
@@ -106,4 +114,4 @@ gapi = require("gocq_api")
 
 !!! note "函数返回值"
 
-    这个函数会返回一个值，也就是[API|go-cqhttp帮助中心](https://docs.go-cqhttp.org/api/){https://docs.go-cqhttp.org/api/} 中有说明的响应json数据，你可以设置一个变量来接收并发送它。
+    这个函数会返回一个值，也就是[API|go-cqhttp帮助中心](https://docs.go-cqhttp.org/api/) 中有说明的响应json数据，你可以设置一个变量来接收并发送它。
