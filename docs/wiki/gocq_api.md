@@ -22,7 +22,7 @@ status: New
     
     参考配置：
     
-    ``` yml
+    ```yaml
     - http: # HTTP 通信设置
       address: 127.0.0.1:15700 # HTTP监听地址，这里的端口【15700】如果改为了其他的，需在gocq_api.lua中同步改动http_port的值
       timeout: 5 # 反向 HTTP 超时时间, 单位秒，<5时将被忽略
@@ -86,7 +86,7 @@ gapi = require("gocq_api")
 例如，如果在API|go-cqhttp帮助中心中的内容如下：
 
 
-终结点：/send_msg
+终结点：`/send_msg`
 
 
 
