@@ -830,6 +830,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#http" class="md-nav__link">
+    零.配置http通信
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
     一.下载与安装
   </a>
@@ -1190,6 +1197,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#http" class="md-nav__link">
+    零.配置http通信
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
     一.下载与安装
   </a>
@@ -1246,21 +1260,22 @@
 <summary>Quote</summary>
 <p>其实就是个低技术力的拓展函数库啦，要是能给大佬们帮上忙我就太荣幸了：）</p>
 </details>
-<details class="note" open="open">
-<summary>配置http通信</summary>
+<h2 id="http">零.配置http通信<a class="headerlink" href="#http" title="Permanent link">&para;</a></h2>
+<div class="admonition tip inline end">
+<p class="admonition-title">Tip</p>
 <p>如果你早已配置好这些，请忽略这块内容。</p>
+</div>
 <p>本函数库仅支持http post与http get两种api调用方式，所以在使用前请配置好http通信。</p>
 <p>参考配置：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">http</span><span class="p">:</span><span class="w"> </span><span class="c1"># HTTP 通信设置</span><span class="w"></span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="nt">address</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">127.0.0.1:15700</span><span class="w"> </span><span class="c1"># HTTP监听地址，这里的端口【15700】如果改为了其他的，需在gocq_api.lua中同步改动http_port的值</span><span class="w"></span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="nt">timeout</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5</span><span class="w"> </span><span class="c1"># 反向 HTTP 超时时间, 单位秒，&lt;5时将被忽略</span><span class="w"></span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">  </span><span class="nt">long-polling</span><span class="p">:</span><span class="w"> </span><span class="c1"># 长轮询拓展</span><span class="w"></span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w">       </span><span class="c1"># 是否开启</span><span class="w"></span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="nt">max-queue-size</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2000</span><span class="w"> </span><span class="c1"># 消息队列大小，0 表示不限制队列大小，谨慎使用</span><span class="w"></span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">  </span><span class="nt">middlewares</span><span class="p">:</span><span class="w"></span>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span><span class="nt">&lt;&lt;</span><span class="p">:</span><span class="w"> </span><span class="nv">*default</span><span class="w"> </span><span class="c1"># 引用默认中间件</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>- http: # HTTP 通信设置
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  address: 127.0.0.1:15700 # HTTP监听地址，这里的端口【15700】如果改为了其他的，需在gocq_api.lua中同步改动http_port的值
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>  timeout: 5 # 反向 HTTP 超时时间, 单位秒，&lt;5时将被忽略
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>  long-polling: # 长轮询拓展
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    enabled: false       # 是否开启
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    max-queue-size: 2000 # 消息队列大小，0 表示不限制队列大小，谨慎使用
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>  middlewares:
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    &lt;&lt;: *default # 引用默认中间件
 </code></pre></div>
-</details>
 <h2 id="_1">一.下载与安装<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>要调用一个库，首先你得<span class="tooltip hint--top" aria-label="废话">下载它</span></p>
 <p>你可以点击下方这个按钮来下载这个库文件。</p>
@@ -1292,10 +1307,10 @@
 <li><strong>http_post("终结点",参数1,参数2......)</strong></li>
 <li><strong>http_get("终结点",参数1,参数2......)</strong></li>
 </ul>
-<p>两个函数分别对应了两种api调用方法：post与get。两种方法的差异请参考 <a href="https://docs.go-cqhttp.org/api/">API|go-cqhttp帮助中心</a>{<a href="https://docs.go-cqhttp.org/api/">https://docs.go-cqhttp.org/api/</a>} 。</p>
-<p><strong>api参数请严格按照 <a href="https://docs.go-cqhttp.org/api/">API|go-cqhttp帮助中心</a>{<a href="https://docs.go-cqhttp.org/api/">https://docs.go-cqhttp.org/api/</a>} 中的排列顺序，即从上到下，按序传入，否则可能会出现错误。</strong></p>
+<p>两个函数分别对应了两种api调用方法：post与get。两种方法的差异请参考 <a href="https://docs.go-cqhttp.org/api/">API|go-cqhttp帮助中心</a> 。</p>
+<p><strong>api参数请严格按照 <a href="https://docs.go-cqhttp.org/api/">API|go-cqhttp帮助中心</a> 中的排列顺序，即从上到下，按序传入，否则可能会出现错误。</strong></p>
 <p>例如，如果在API|go-cqhttp帮助中心中的内容如下：</p>
-<p>终结点：<code>/send_msg</code></p>
+<p>终结点：/send_msg</p>
 <table>
 <thead>
 <tr>
@@ -1342,7 +1357,7 @@
 <p>然后，在调用这个函数时，骰娘便会向群聊<span class="tooltip hint--top" aria-label="☃️ssJSKFJDJ♬">971050440</span>发送一条信息: “test,test~”。</p>
 <div class="admonition note">
 <p class="admonition-title">函数返回值</p>
-<p>这个函数会返回一个值，也就是<a href="https://docs.go-cqhttp.org/api/">API|go-cqhttp帮助中心</a>{<a href="https://docs.go-cqhttp.org/api/">https://docs.go-cqhttp.org/api/</a>} 中有说明的响应json数据，你可以设置一个变量来接收并发送它。</p>
+<p>这个函数会返回一个值，也就是<a href="https://docs.go-cqhttp.org/api/">API|go-cqhttp帮助中心</a> 中有说明的响应json数据，你可以设置一个变量来接收并发送它。</p>
 </div>
 
 
@@ -1357,7 +1372,7 @@
 </div>
 
 
-  <small>贡献者: <span class='git-page-authors git-authors'><a href='mailto:hsiangnianian@outlook.com'>cypress0522</a> (10.09%), <a href='mailto:116723741+pineoncellar@users.noreply.github.com'>pine</a> (89.91%)</span></small>
+  <small>贡献者: <span class='git-page-authors git-authors'><a href='mailto:hsiangnianian@outlook.com'>cypress0522</a> (7.96%), <a href='mailto:116723741+pineoncellar@users.noreply.github.com'>pine</a> (92.04%)</span></small>
 
 
   
