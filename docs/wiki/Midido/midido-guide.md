@@ -48,4 +48,8 @@ local writer = Writer.new(track)
 writer:save_MIDI('C Major Scale')
 ```
 
-由于代码中已经有一些注释，因此不需要对其再进行解释说明。 这是 MIDI 文件构建的基本步骤。
+由于代码中已经有一些注释，因此不需要对其再进行解释说明。 这是 MIDI 文件构建的基本步骤。我们下一章开始进入更加深入的研究。
+
+<p align="center">
+    <a class="md-button" href="../forward">进阶👉</a>
+</p>
