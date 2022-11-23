@@ -3,7 +3,7 @@ template: overrides/main.html
 ---
 # Midido ♫
 
-> 一个简单读写 MIDI 文件的 Lua 库
+> 介绍所有的模块与类，其API参数以及可实现的功能和局限。
 
 ## Module
 
