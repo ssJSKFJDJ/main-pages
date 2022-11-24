@@ -169,11 +169,11 @@ template: overrides/main.html
     - Dice版本2.6.5beta12(624+)以上安装方法:
 
     1. 在 `./DiceQQ/conf/mod/source.list`文件内（没有mod文件夹和这文件就新建）输入 
-    ```
-    https://raw.sevencdn.com/Dice-Developer-Team/DiceModIndex/main/
-    https://raw.githubusercontent.com/Dice-Developer-Team/DiceModIndex/main/
-    https://ssjskfjdj.netlify.app/Module/
-    ````
+        ```
+        https://raw.sevencdn.com/Dice-Developer-Team/DiceModIndex/main/
+        https://raw.githubusercontent.com/Dice-Developer-Team/DiceModIndex/main/
+        https://ssjskfjdj.netlify.app/Module/
+        ````
     2. 使用 `.system load`命令重载bot，这样做的目的是为了让步骤1里的远程地址生效。
     3. 对bot发送 `.mod get [功能模块名]`命令，等待安装。
     4. 回到第二步，这样做的目的是为了让mod被加载。
