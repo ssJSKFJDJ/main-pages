@@ -1,0 +1,13 @@
+{
+    "mod":"AImage",
+    "author":"Stardust·减&简律纯&安研色Shiki",
+    "ver":"1.0.3ex(5)",
+    "dice_build":629,
+    "brief":"AI作画",
+    "comment":"",
+    "repo":"https://ghproxy.com/https://github.com/mystringEmpty/AImage.git",
+    "helpdoc":{
+        "aimage":"调用后端WebUI根据所给文本绘图，每人每日20张\n.nai 画面描述 //如 .nai 1girl,maid\n如无需改动参数，下次绘图可省略（自动沿用上次绘图参数）\n.nai on/off 群内画图开/关",
+        "naifu":"&aimage"
+    }
+}
