@@ -6,9 +6,9 @@ status: New
 
 !!! Info inline
 
-    基于gocq的网络api调用写出的一个拓展函数库，便于各位大佬写插件时调用api。
+    基于gocq的api调用写出的拓展函数库，便于大佬写插件时调用api。
     
-    请配合 [API|go-cqhttp帮助中心](https://docs.go-cqhttp.org/api/)使用此库。
+    请结合 [API|go-cqhttp帮助中心](https://docs.go-cqhttp.org/api/)使用此库。
 
 !!! Quote
 
@@ -30,7 +30,7 @@ status: New
     
 参考配置：
     
-``` yml
+```yaml
 - http: # HTTP 通信设置
   address: 127.0.0.1:15700 # HTTP监听地址，这里的端口【15700】如果改为了其他的，需在gocq_api.lua中同步改动http_port的值
   timeout: 5 # 反向 HTTP 超时时间, 单位秒，<5时将被忽略
