@@ -114,4 +114,12 @@ gapi = require("gocq_api")
 
 !!! note "函数返回值"
 
-    这个函数会返回一个值，也就是[API|go-cqhttp帮助中心](https://docs.go-cqhttp.org/api/) 中有说明的响应json数据，你可以设置一个变量来接收并发送它。
+    这个函数会返回两个值，一个是此函数调用成功与否的布尔值，另一个是[API|go-cqhttp帮助中心](https://docs.go-cqhttp.org/api/) 中有说明的响应json数据，你可以设置变量来接收并发送它们。
+
+### 四.更新日志
+
+- 2022.11.28
+
+修复set_group_special_title调用出错的bug；
+
+增加了一个函数返回值。
