@@ -14,7 +14,7 @@ template: overrides/main.html
 
 > for script or mod.
 
-<img src="https://ghchart.rshah.org/cypress0522" />
+<img src="https://ghchart.rshah.org/A2C29K9" />
 
 ## Contribute
 
@@ -141,10 +141,10 @@ template: overrides/main.html
      "ver":"1.1.8",
      "dice_build":612,
      "brief":"使用mml作曲",
-     "pkg":"https://github.com/cypress0522/listen2me/releases/download/v1.1.8/listen2me_v1.1.8.zip",
+     "pkg":"https://github.com/A2C29K9/listen2me/releases/download/v1.1.8/listen2me_v1.1.8.zip",
      "comment":"",
      "helpdoc":{
-         "listen2me":"【listen2me[Windows]】\n使用mml语言进行作曲\nhttps://github.com/cypress0522/listen2me"
+         "listen2me":"【listen2me[Windows]】\n使用mml语言进行作曲\nhttps://github.com/A2C29K9/listen2me"
      }
    }
    ```

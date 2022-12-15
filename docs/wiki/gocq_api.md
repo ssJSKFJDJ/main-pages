@@ -16,7 +16,7 @@ status: New
     
     要是能给大佬们帮上忙我就太荣幸了
     
-    ❤️🧡💛💚💙💜🖤🤎🤍💝
+    如果出现什么bug，请联系我（QQ602380092）
 
 
 ## 零.配置http通信
@@ -32,7 +32,7 @@ status: New
     
 ```yaml
 - http: # HTTP 通信设置
-  address: 127.0.0.1:15700 # HTTP监听地址，这里的端口【15700】如果改为了其他的，需在gocq_api.lua中同步改动http_port的值
+  address: 127.0.0.1:15700 # HTTP监听地址
   timeout: 5 # 反向 HTTP 超时时间, 单位秒，<5时将被忽略
   long-polling: # 长轮询拓展
     enabled: false       # 是否开启
@@ -40,6 +40,7 @@ status: New
   middlewares:
     <<: *default # 引用默认中间件
 ```
+**这里的端口【15700】如果改为了其他的，需在gocq_api.lua中同步改动http_port的值**
 
 ## 一.下载与安装
 
@@ -49,22 +50,15 @@ status: New
 
 [Download gocq_api.zip](https://ssjskfjdj.netlify.app/download/scripts/gocq_api.zip){ .md-button }
 
-然后，将下载的压缩包解压，你会得到以下文件：
-
-``` md
-    |——gocq_api.lua
-    |——gocq_api
-          |——api_list.json
-```
-
-一个名叫gocq_api的lua文件，与一个同名的文件夹，文件夹中含有一个api_list.json文件。
+然后，将下载的压缩包解压，你会得到一个名叫gocq_api的lua文件。
 
 接下来只要把gocq_api.lua和同名的文件夹一起扔进diceqq/plugin文件夹里面，对你的骰娘使用system load指令就好了。
+
+~~更新为单lua文件之后这一节好像有些多余~~
 
 !!! note 
 
     当然，如果你希望的话，gocq_api.lua也可以放进diceki/lua文件夹里。
-    但如果不修改其中路径的话，gocq_api文件夹就只能放在diceqq/plugin文件夹中。
 
 ## 二.调用函数
 
@@ -114,4 +108,18 @@ gapi = require("gocq_api")
 
 !!! note "函数返回值"
 
-    这个函数会返回一个值，也就是[API|go-cqhttp帮助中心](https://docs.go-cqhttp.org/api/) 中有说明的响应json数据，你可以设置一个变量来接收并发送它。
+    这个函数会返回两个值，一个是此函数调用成功与否的布尔值，另一个是[API|go-cqhttp帮助中心](https://docs.go-cqhttp.org/api/) 中有说明的响应json数据，你可以设置变量来接收并发送它们。
+
+### 四.更新日志
+
+- 2022.11.28
+
+修复set_group_special_title调用出错的bug；
+
+增加了一个函数返回值。
+
+- 2022.12.3
+
+将库更新为单个lua文件，使用更方便
+
+~~但是不敢确定复制过程中有没有留下新bug~~
