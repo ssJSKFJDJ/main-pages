@@ -1,0 +1,12 @@
+{
+    "mod":"rssSub",
+    "author":"简律纯",
+    "ver":"alpha-0.1",
+    "dice_build":612,
+    "brief":"rss订阅推送",
+    "comment":"",
+    "repo":"
+    "helpdoc":{
+        "rssSub":"https://github.com/A2C29K9/rssSub"
+    }
+}
