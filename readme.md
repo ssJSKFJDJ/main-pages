@@ -2,9 +2,6 @@
 
 [![Star Trend](https://api.star-history.com/svg?repos=ssJSKFJDJ/main-pages&type=Timeline)](https://seladb.github.io/StarTrack-js/#/preload?r=ssJSKFJDJ,main-pages&r=ssJSKFJDJ,plugin&r=ssJSKFJDJ,PublicDeck&r=ssJSKFJDJ,mml530)
 
-
-![Alt](https://repobeats.axiom.co/api/embed/31f4c9d2d532ef010e6171dc501f976c1481d799.svg "Repobeats analytics image")
-
 <a href="https://github.com/ssJSKFJDJ/main-pages/graphs/contributors">
 
   <img src="https://contrib.rocks/image?repo=ssJSKFJDJ/main-pages" />
